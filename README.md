@@ -20,14 +20,4 @@ Qwen2.5-7B) that predicts run failure from the first 3 tool calls.
 - Anjuta Khongbantabam 
 
 ## Project structure
-agent-reliability-harness/
-├── src/
-│   ├── harness/          # Fault injection, agent loop
-│   ├── predictor/        # QLoRA training and inference
-│   ├── metrics/          # pass^k, robustness, fault tolerance
-│   └── baselines/        # Heuristic and majority-class baselines
-├── scripts/              # Runnable scripts
-├── configs/              # Model configs, fault rates, task splits
-├── slurm/                # SLURM job scripts for Tillicum
-├── tests/                # Unit tests
-└── notebooks/            # Analysis and inspection notebooks
+
