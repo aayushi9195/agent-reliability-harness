@@ -1,0 +1,9 @@
+logs/
+model_failure_appendix/
+
+__pycache__/
+*.py[cod]
+
+tau2-bench/data/simulations/
+tau2-bench/data/tau2/results/
+**/results.json
