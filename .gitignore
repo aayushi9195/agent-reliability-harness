@@ -1,0 +1,25 @@
+# Python/runtime artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local caches and model artifacts
+cache/
+models/
+.hf_cache/
+.torch_cache/
+.triton_cache/
+
+# Generated experiment outputs
+logs/
+results/
+data/
+metrics/*.json
+*.log
+*.out
+
+# Nested upstream/vendor checkouts
+repos/
+
+# Accidental shell artifact
+=0.43.0
