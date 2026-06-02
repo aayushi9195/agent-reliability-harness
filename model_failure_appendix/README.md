@@ -8,7 +8,6 @@ This directory contains derived summaries of model failures from tau2 benchmark 
 | --- | --- |
 | [Summary Counts](#summary-counts) | Overall deduplicated failure counts by model label. |
 | [Main Failure Themes](#main-failure-themes) | Cross-model failure categories. |
-| [Model Performance Summary](#model-performance-summary) | Interpretation-level summary of model reliability patterns. |
 | [Mistral/Mixtral Failure Summaries](#mistralmixtral-failure-summaries) | Focused summaries for the Mistral-family models. |
 | [Llama Failure Summary](#llama-failure-summary) | Focused summary for `Llama-3.1-8B-Instruct`. |
 | [Qwen Failure Summary](#qwen-failure-summary) | Focused summary for Qwen-family model labels. |
@@ -85,21 +84,6 @@ The most common failure classes observed in the deduplicated records are:
 | Context window exceeded | Prompt length exceeded max context length, commonly 16,384, 32,768, or 40,960 token limits depending on configuration. |
 | External API pressure | OpenAI `RateLimitError` and `AuthenticationError` in runs using API-backed user/model calls. |
 | Tool-call parsing failures | JSON decode errors when extracting tool calls from model responses. |
-
-## Model Performance Summary
-
-Across the filtered failure inventory, the observed failures primarily measure deployment and interface reliability rather than task-solving quality. Most models did not fail because the benchmark exposed weak reasoning directly; they failed because the serving stack, chat schema, tool-call configuration, model routing, or context limits prevented clean task execution.
-
-| Model or family | Performance interpretation |
-| --- | --- |
-| `Mistral-7B-Instruct-v0.1` | Failed on chat message formatting: the hosted endpoint rejected non-alternating conversation roles. This points to request-shape incompatibility rather than context length or server availability. |
-| `mistral32-10` / `mistral-small32-24b` | Showed two reliability limits: an earlier upstream API/model-name issue, followed by repeat context-window overflow against an 8,192-token Mistral Small 3.2 vLLM configuration. The server was reachable in the later run but rejected over-length prompts. |
-| `Mixtral-8x7B-Instruct-v0` | Reliability was dominated by tool/chat configuration. Several runs did not reach benchmark execution because of invalid vLLM startup arguments or missing templates; later runs failed on role alternation, missing auto-tool-choice setup, or parser/tokenizer incompatibility. |
-| `Llama-3.1-8B-Instruct` | Produced the largest occurrence count, but most records were retry-amplified tool/chat setup failures: single-tool-call constraints, missing or invalid parser/template configuration, auto-tool-choice setup errors, and context-window overflow. |
-| Qwen family | Failures split across routing mismatches, context-window limits at several configurations, tool-call/parser or response-shape errors, vLLM availability, and external API rate limiting during calibration-style runs. This family needs both naming/config cleanup and prompt-length controls before performance can be judged cleanly. |
-| `gemma-2-9b-it` | Failed on chat message schema compatibility. The hosted vLLM endpoint rejected system-role messages, so retries repeated the same request-shape failure rather than surfacing model-task behavior. |
-
-Overall, the strongest conclusion is that benchmark reliability is currently bottlenecked by orchestration correctness: chat-template compatibility, tool-call parser selection, served-model naming, vLLM readiness, and context-window budgeting. Once those issues are stabilized, the same inventory should be regenerated to separate true model performance from infrastructure and request-format failures.
 
 ## Mistral/Mixtral Failure Summaries
 
