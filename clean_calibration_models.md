@@ -71,6 +71,26 @@ It served as a useful smaller comparison point, but it was not as strong or as s
 
 ---
 
+## Qwen3-8B calibration
+
+`Qwen3-8B` was screened as another smaller Qwen-family candidate. The clearest clean-calibration references were:
+
+- `Rollout-Qwen3-8B-tau2-116756.out`
+- `Rollout-Qwen3-8B-tau2-116769.out`
+
+### Result
+`Qwen3-8B` was useful as an intermediate-size Qwen baseline, but it did not become the preferred final Qwen configuration.
+
+### Observations
+- smaller than `Qwen3-14B`, making it more practical as a lightweight comparison point
+- broader run history showed model-routing, parser, and context-window-related issues in some Qwen3-8B attempts
+- did not provide enough advantage over the stronger `Qwen3-14B` thinking-enabled setup
+
+### Decision
+`Qwen3-8B` was treated as a calibration/reference candidate rather than the preferred final model.
+
+---
+
 ## Hermes-2-Pro-Llama-3-8B calibration
 
 `NousResearch/Hermes-2-Pro-Llama-3-8B` was also screened.
@@ -125,6 +145,25 @@ The DeepSeek-R1-Distill-Qwen models were not continued in the main benchmark pat
 
 ---
 
+## Gemma-2-9B-IT calibration
+
+`gemma-2-9b-it` was screened during clean calibration using the clearest available Gemma sample log:
+
+- `Rollout-Gemma-tau2-116938.out`
+
+### Result
+The run exposed a clear chat-schema compatibility problem rather than a clean task-performance result.
+
+### Observations
+- the hosted vLLM endpoint rejected system-role messages
+- retries repeated the same request-shape failure
+- the run is most useful as evidence of system-role compatibility issues for Gemma in this tau2 setup
+
+### Decision
+`gemma-2-9b-it` was not treated as a strong clean-calibration candidate without additional chat-template or message-format adjustment.
+
+---
+
 ## Early Llama-3.1-8B-Instruct fallback attempt
 
 `Llama-3.1-8B-Instruct` was considered as an early fallback candidate.
@@ -163,8 +202,10 @@ The calibration stage was therefore used to narrow the candidate set before the 
 | --- | --- | --- | --- |
 | `Qwen3-14B` | thinking ON vs OFF | ON performed about 2x better than OFF | keep thinking ON |
 | `Qwen/Qwen2.5-7B-Instruct` | clean calibration | useful smaller baseline, but weaker than Qwen3-14B | comparison only |
+| `Qwen3-8B` | clean calibration via `Rollout-Qwen3-8B-tau2-116756.out` and `Rollout-Qwen3-8B-tau2-116769.out` | intermediate Qwen baseline; not stronger than Qwen3-14B thinking ON | comparison only |
 | `NousResearch/Hermes-2-Pro-Llama-3-8B` | clean calibration | weak agent-task performance | drop |
 | `mistralai/Mistral-Small-3.2-24B-Instruct-2506` | clean calibration | `Pass^1 = 0.00`, high token cost, context issues | drop |
 | `deepseek-ai/DeepSeek-R1-Distill-Qwen-7B` | clean screening | poor fit with local serving setup | do not continue |
 | `deepseek-ai/DeepSeek-R1-Distill-Qwen-14B` | clean screening | poor fit with local serving setup | do not continue |
+| `gemma-2-9b-it` | clean calibration via `Rollout-Gemma-tau2-116938.out` | clearest Gemma sample; system-role compatibility failure | not preferred without message-format adjustment |
 | `Llama-3.1-8B-Instruct` | early fallback screening | unstable due to configuration/runtime issues | not preferred |
