@@ -1,0 +1,37 @@
+{
+  "chosen_threshold": 0.985496,
+  "selection_rule": {
+    "max_false_stop_rate": 0.05,
+    "selected_on": "validation"
+  },
+  "test_metrics": {
+    "threshold": 0.985496,
+    "n": 461,
+    "stopped_total": 163,
+    "stopped_success": 4,
+    "stopped_failure": 159,
+    "stop_rate": 0.35357917570498915,
+    "false_stop_rate_success": 0.032,
+    "failure_stop_rate": 0.4732142857142857,
+    "stop_precision_failure": 0.9754601226993865,
+    "original_pass_rate": 0.27114967462039047,
+    "pass_rate_after_stop": 0.26247288503253796,
+    "pass_rate_drop": 0.008676789587852507,
+    "tool_calls_saved": 195,
+    "turns_saved": 1420,
+    "tool_call_compute_saved_pct": 0.09908536585365854,
+    "turn_compute_saved_pct": 0.08294877037210117,
+    "tool_calls_saved_on_failures": 191,
+    "turns_saved_on_failures": 1404
+  },
+  "config": {
+    "full_input": "metrics/episode_results.json",
+    "early_input": "data/predictor_early_3.json",
+    "model_dir": "results/predictor-early-3",
+    "prefix_tool_calls": 3,
+    "seed": 42,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15,
+    "max_length": 2048
+  }
+}
