@@ -48,6 +48,26 @@ The project is organized around running, analyzing, and reporting reliability ex
 - clean_calibration_models.md summarizes calibration-related model screening and clean-run evaluation notes.
 
 
+## Best Log Samples By Model
+
+These logs are representative samples for report review and GitHub project documentation. Rollout logs show benchmark execution behavior; paired vLLM logs show server-side model configuration and serving failures.
+
+| Model | Best sample log | Why this sample is useful |
+| --- | --- | --- |
+| Llama-3.1-8B-Instruct | [Rollout-llama-tau2-118170.out](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/Rollout-llama-tau2-118170.out) | Clean model/run metadata with vLLM config: LlamaForCausalLM, max_model_len=16384, and tool_call_parser=llama3_json. |
+| Qwen/Qwen2.5-7B-Instruct | [Rollout-Qwen2.5-tau2-119520.out](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/Rollout-Qwen2.5-tau2-119520.out) | Good rollout sample showing Qwen2.5 tau2 execution and vLLM readiness behavior. |
+| Qwen3-8B | [Rollout-Qwen3-8B-tau2-116769.out](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/Rollout-Qwen3-8B-tau2-116769.out) | Clear run metadata: model, seed, task range, retail domain, agent, user simulator, and concurrency. |
+| Qwen3-14B | [qwen3-14b-10-119228.out](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/qwen3-14b-10-119228.out) | Representative rollout log for Qwen3-14B. |
+| Qwen3-14B server | [vllm-qwen3-14b-119228.log](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/vllm-qwen3-14b-119228.log) | Server-side companion log for served model name, architecture, context length, dtype, and parser setup. |
+| Mistral-7B-Instruct-v0.1 | [Rollout-Min3-8B-tau2-116780.out](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/Rollout-Min3-8B-tau2-116780.out) | Clearest sample of Mistral chat-format failure: role alternation rejection. |
+| Mixtral-8x7B-Instruct-v0 | [Rollout-Min3-8B-tau2-119512.out](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/Rollout-Min3-8B-tau2-119512.out) | Good sample for later Mixtral tool/parser compatibility failures after startup issues were being resolved. |
+| Mistral-Small-3.2-24B-Instruct | [mistral32-10-119320.out](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/mistral32-10-119320.out) | Strong client-side sample showing repeated context-window overflow at the 8,192-token limit. |
+| Mistral-Small-3.2-24B-Instruct server | [vllm-mistral-small32-24b-119320.log](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/vllm-mistral-small32-24b-119320.log) | Best server-side evidence for the same context-window failures. |
+| gemma-2-9b-it | [Rollout-Gemma-tau2-116938.out](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/Rollout-Gemma-tau2-116938.out) | Clearest Gemma sample; shows system-role compatibility failure. |
+| NousResearch/Hermes-2-Pro-Llama-3-8B | [hermes10-119142.out](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/hermes10-119142.out) | Representative Hermes rollout log. |
+| NousResearch/Hermes-2-Pro-Llama-3-8B server | [vllm-hermes-119142.log](https://github.com/aayushi9195/agent-reliability-harness/blob/main/logs/vllm-hermes-119142.log) | Contains served model, architecture, context length, dtype, and Hermes parser setup. |
+
+
 ## Model Performance Summary
 
 Overall, the benchmark results suggest that model performance was limited less by reasoning quality and more by orchestration reliability. Many failures occurred before the models could complete tasks cleanly, due to serving configuration, chat-template incompatibilities, tool-call parsing issues, model-name routing mismatches, API rate limits, and context-window overflows.
