@@ -44,6 +44,19 @@ File purposes:
 | `validation_threshold_sweep.csv` | Validation-set threshold sweep used to select the early-stop threshold. |
 | `test_predictions.json` | Per-episode test predictions and trajectory length metadata. |
 
+## Test-Set Model Coverage
+
+The compute-saved evaluation used a held-out test split containing episodes from multiple agent models. The predictor backbone was `Qwen2.5-7B-Instruct`, but the evaluated episodes were not limited to Qwen2.5.
+
+| Agent model | Test episodes |
+| --- | ---: |
+| `Qwen3-14B` | 187 |
+| `Qwen2.5-7B-Instruct` | 156 |
+| `gemma-4-31B-it` | 106 |
+| `Llama-3.1-8B-Instruct` | 9 |
+| `Qwen2.5b` | 2 |
+| `Qwen3-8B` | 1 |
+
 ## Test-Set Results
 
 At the validation-selected threshold of `0.985496`, the early-stop policy produced the following held-out test results:

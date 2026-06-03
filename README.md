@@ -47,6 +47,10 @@ The project is organized around running, analyzing, and reporting reliability ex
 
 - clean_calibration_models.md summarizes calibration-related model screening and clean-run evaluation notes.
 
+- predictor_compute_saved_eval.md summarizes the offline early-stop simulation used to evaluate whether the early failure predictor could reduce rollout compute.
+
+
+
 
 ## Best Log Samples By Model
 
@@ -82,6 +86,25 @@ gemma-2-9b-it failed primarily because the hosted vLLM endpoint rejected system-
 
 In summary, the strongest conclusion is that benchmark reliability is currently bottlenecked by the execution stack: vLLM startup configuration, tool-call parser selection, chat-template compatibility, served-model naming, and context-window budgeting. Once these issues are stabilized, the benchmark should be rerun so that model comparisons reflect task performance rather than infrastructure and request-format failures.
 
+## Clean Calibration Model Screening
+
+Before the main rollout set was finalized, additional clean calibration runs were used to screen model feasibility, serving compatibility, and early agent-task performance. These runs were not the full fault-injection rollout matrix; they were used to decide which model configurations were worth continued benchmark effort.
+
+The calibration notes are documented in `clean_calibration_models.md`. Main outcomes:
+
+| Model | Calibration outcome | Decision |
+| --- | --- | --- |
+| `Qwen3-14B` | Thinking ON performed about 2x better than thinking OFF (`Pass^1 = 0.40` vs `0.20`). | Keep thinking ON. |
+| `Qwen/Qwen2.5-7B-Instruct` | Useful smaller baseline, but weaker than Qwen3-14B. | Keep as comparison/reference. |
+| `Qwen3-8B` | Intermediate Qwen-family baseline; not stronger than Qwen3-14B thinking ON. | Comparison only. |
+| `NousResearch/Hermes-2-Pro-Llama-3-8B` | Weak tool-use and task completion in tau2 agent setting. | Drop. |
+| `mistralai/Mistral-Small-3.2-24B-Instruct-2506` | `Pass^1 = 0.00`, high token cost, context-window failures. | Drop. |
+| `deepseek-ai/DeepSeek-R1-Distill-Qwen-7B` and `14B` | Poor fit with the local vLLM reasoning-serving path. | Do not continue. |
+| `gemma-2-9b-it` | Clear system-role compatibility failure in the clean sample log. | Not preferred without message-format adjustment. |
+| `Llama-3.1-8B-Instruct` | Fallback candidate with parser, template, and context-window issues. | Not preferred. |
+
+The calibration stage showed that model selection depended on serving stability, tool-call compatibility, context-window fit, and actual task completion behavior, not only general instruction-model quality.
+
 ## Fault Injection Summary
 
 To evaluate model robustness under degraded or adversarial input conditions, we added a local fault-injection layer to the tau2 LLM request pipeline. The main addition was fault_injection.py, which can perturb user messages before they are sent to the model. The injection mode is controlled through the FAULT_MODE environment variable and supports four settings: clean, light, heavy, and schema.
@@ -93,3 +116,34 @@ The fault injector is integrated into llm_utils.py, meaning it is applied before
 These changes were intended to make the benchmark more robust against hosted vLLM and LiteLLM interface failures while also enabling controlled reliability experiments. The fault modes allow comparison between normal execution and progressively more disruptive conditions, helping identify whether failures come from model reasoning, prompt corruption, schema fragility, tool-call formatting, or serving-stack incompatibility.
 
 A key caveat is that the modified pipeline is not identical to upstream tau2-bench behavior. Even in clean mode, messages pass through normalization, validation, tool-call sanitization, and system-message coercion. Therefore, results should be reported as coming from a locally modified tau2 benchmark harness rather than the unmodified upstream implementation.
+
+## Early Failure Predictor and Compute-Saved Evaluation
+
+The project fine-tuned a binary early failure predictor using QLoRA with `Qwen2.5-7B-Instruct` as the classifier backbone. The predictor task is sequence classification: given an early trajectory prefix, predict whether the full episode will eventually succeed or fail.
+
+The early predictor used the first 3 tool-call rounds as input. Training used a 70/15/15 train/validation/test split, with validation used for checkpoint and threshold selection and the held-out test split reserved for final reporting.
+
+The compute-saving evaluation is documented in `predictor_compute_saved_eval.md`. It used an offline early-stop simulation:
+
+1. run the predictor on each held-out test episode prefix;
+2. stop the episode if predicted failure probability exceeds a threshold;
+3. compare the stopped prefix length to the original full trajectory length.
+
+The threshold was selected on validation with a maximum 5% false-stop rate on successful validation episodes. On the held-out test split:
+
+| Metric | Value |
+| --- | ---: |
+| Test episodes | 461 |
+| Episodes stopped early | 163 |
+| Stop rate | 35.36% |
+| Correctly stopped failures | 159 |
+| Incorrectly stopped successes | 4 |
+| Stop precision for failures | 97.55% |
+| False-stop rate on successful episodes | 3.20% |
+| Pass-rate drop | 0.87 percentage points |
+| Tool-call compute saved | 9.91% |
+| Turn compute saved | 8.29% |
+
+The predictor backbone was `Qwen2.5-7B-Instruct`, but the compute-saved test split included episodes from multiple agent models: `Qwen3-14B`, `Qwen2.5-7B-Instruct`, `gemma-4-31B-it`, `Llama-3.1-8B-Instruct`, `Qwen2.5b`, and `Qwen3-8B`.
+
+This result should be described as an offline replay estimate rather than live GPU-time measurement. The defensible claim is that the predictor could have reduced rollout work by stopping likely failing episodes early under the simulated policy.
