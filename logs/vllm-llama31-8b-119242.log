@@ -1,0 +1,110 @@
+(APIServer pid=2525214) INFO 05-19 13:24:39 [utils.py:299] 
+(APIServer pid=2525214) INFO 05-19 13:24:39 [utils.py:299]        █     █     █▄   ▄█
+(APIServer pid=2525214) INFO 05-19 13:24:39 [utils.py:299]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.19.1
+(APIServer pid=2525214) INFO 05-19 13:24:39 [utils.py:299]   █▄█▀ █     █     █     █  model   meta-llama/Llama-3.1-8B-Instruct
+(APIServer pid=2525214) INFO 05-19 13:24:39 [utils.py:299]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=2525214) INFO 05-19 13:24:39 [utils.py:299] 
+(APIServer pid=2525214) INFO 05-19 13:24:39 [utils.py:233] non-default args: {'model_tag': 'meta-llama/Llama-3.1-8B-Instruct', 'enable_auto_tool_choice': True, 'tool_call_parser': 'llama3_json', 'host': '127.0.0.1', 'api_key': ['local-token'], 'model': 'meta-llama/Llama-3.1-8B-Instruct', 'dtype': 'bfloat16', 'max_model_len': 8192, 'enforce_eager': True, 'served_model_name': ['meta-llama/Llama-3.1-8B-Instruct'], 'generation_config': 'vllm'}
+(APIServer pid=2525214) Traceback (most recent call last):
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 761, in hf_raise_for_status
+(APIServer pid=2525214)     response.raise_for_status()
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+(APIServer pid=2525214)     raise HTTPStatusError(message, request=request, response=self)
+(APIServer pid=2525214) httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json'
+(APIServer pid=2525214) For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+(APIServer pid=2525214) 
+(APIServer pid=2525214) The above exception was the direct cause of the following exception:
+(APIServer pid=2525214) 
+(APIServer pid=2525214) Traceback (most recent call last):
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/transformers/utils/hub.py", line 422, in cached_files
+(APIServer pid=2525214)     hf_hub_download(
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+(APIServer pid=2525214)     return fn(*args, **kwargs)
+(APIServer pid=2525214)            ^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 997, in hf_hub_download
+(APIServer pid=2525214)     return _hf_hub_download_to_cache_dir(
+(APIServer pid=2525214)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1148, in _hf_hub_download_to_cache_dir
+(APIServer pid=2525214)     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1782, in _raise_on_head_call_error
+(APIServer pid=2525214)     raise head_call_error
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1669, in _get_metadata_or_catch_error
+(APIServer pid=2525214)     metadata = get_hf_file_metadata(
+(APIServer pid=2525214)                ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+(APIServer pid=2525214)     return fn(*args, **kwargs)
+(APIServer pid=2525214)            ^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1591, in get_hf_file_metadata
+(APIServer pid=2525214)     response = _httpx_follow_relative_redirects_with_backoff(
+(APIServer pid=2525214)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 692, in _httpx_follow_relative_redirects_with_backoff
+(APIServer pid=2525214)     hf_raise_for_status(response)
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 787, in hf_raise_for_status
+(APIServer pid=2525214)     raise _format(GatedRepoError, message, response, repo_type=repo_type, repo_id=repo_id) from e
+(APIServer pid=2525214) huggingface_hub.errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-6a0cc707-40a4007873d8e8800df77abb;6d4ddf60-b14b-4a28-b29a-8f6effa7f5ce)
+(APIServer pid=2525214) 
+(APIServer pid=2525214) Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json.
+(APIServer pid=2525214) Access to model meta-llama/Llama-3.1-8B-Instruct is restricted. You must have access to it and be authenticated to access it. Please log in.
+(APIServer pid=2525214) 
+(APIServer pid=2525214) The above exception was the direct cause of the following exception:
+(APIServer pid=2525214) 
+(APIServer pid=2525214) Traceback (most recent call last):
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/bin/vllm", line 6, in <module>
+(APIServer pid=2525214)     sys.exit(main())
+(APIServer pid=2525214)              ^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 75, in main
+(APIServer pid=2525214)     args.dispatch_function(args)
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 122, in cmd
+(APIServer pid=2525214)     uvloop.run(run_server(args))
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=2525214)     return __asyncio.run(
+(APIServer pid=2525214)            ^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/asyncio/runners.py", line 195, in run
+(APIServer pid=2525214)     return runner.run(main)
+(APIServer pid=2525214)            ^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=2525214)     return self._loop.run_until_complete(task)
+(APIServer pid=2525214)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=2525214)     return await main
+(APIServer pid=2525214)            ^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 672, in run_server
+(APIServer pid=2525214)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 686, in run_server_worker
+(APIServer pid=2525214)     async with build_async_engine_client(
+(APIServer pid=2525214)                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=2525214)     return await anext(self.gen)
+(APIServer pid=2525214)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 100, in build_async_engine_client
+(APIServer pid=2525214)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=2525214)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=2525214)     return await anext(self.gen)
+(APIServer pid=2525214)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 124, in build_async_engine_client_from_engine_args
+(APIServer pid=2525214)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+(APIServer pid=2525214)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 1539, in create_engine_config
+(APIServer pid=2525214)     maybe_override_with_speculators(
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/transformers_utils/config.py", line 583, in maybe_override_with_speculators
+(APIServer pid=2525214)     config_dict, _ = PretrainedConfig.get_config_dict(
+(APIServer pid=2525214)                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/transformers/configuration_utils.py", line 682, in get_config_dict
+(APIServer pid=2525214)     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+(APIServer pid=2525214)                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/transformers/configuration_utils.py", line 737, in _get_config_dict
+(APIServer pid=2525214)     resolved_config_file = cached_file(
+(APIServer pid=2525214)                            ^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/transformers/utils/hub.py", line 278, in cached_file
+(APIServer pid=2525214)     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+(APIServer pid=2525214)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2525214)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/transformers/utils/hub.py", line 488, in cached_files
+(APIServer pid=2525214)     raise OSError(
+(APIServer pid=2525214) OSError: You are trying to access a gated repo.
+(APIServer pid=2525214) Make sure to have access to it at https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct.
+(APIServer pid=2525214) 401 Client Error. (Request ID: Root=1-6a0cc707-40a4007873d8e8800df77abb;6d4ddf60-b14b-4a28-b29a-8f6effa7f5ce)
+(APIServer pid=2525214) 
+(APIServer pid=2525214) Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json.
+(APIServer pid=2525214) Access to model meta-llama/Llama-3.1-8B-Instruct is restricted. You must have access to it and be authenticated to access it. Please log in.

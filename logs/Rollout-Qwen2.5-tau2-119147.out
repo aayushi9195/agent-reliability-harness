@@ -1,0 +1,901 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+==== JOB CONFIG ====
+Model: qwen2.5-7b-instruct
+Fault: clean
+Seed: 2
+Range: 0 -> 10
+Output: /gpfs/projects/imt526a/group2/agent-reliability/results/qwen2.5-7b-instruct/clean/seed_2
+/gpfs/home/tpeyton2/tau_runs
+Starting vLLM...
+Waiting for vLLM...
+vLLM ready
+Computed task count: 11
+Starting tau2-bench 50-task Qwen calibration...
+2026-05-19 09:59:16.537 | WARNING  | tau2.utils.utils:<module>:15 - No .env file found
+2026-05-19 09:59:16.537 | INFO     | tau2.utils.utils:<module>:28 - Using data directory from source: /gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/data
+2026-05-19 09:59:17.927 | INFO     | tau2.utils.llm_utils:<module>:102 - LiteLLM: Cache is disabled
+2026-05-19 09:59:17.985 | DEBUG    | tau2.registry:<module>:281 - Registering default components...
+2026-05-19 09:59:17.987 | DEBUG    | tau2.registry:<module>:292 - Voice dependencies not installed, skipping voice user registration
+2026-05-19 09:59:17.987 | DEBUG    | tau2.registry:<module>:350 - Default components registered successfully. Registry info: {
+  "domains": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ],
+  "agents": [
+    "llm_agent",
+    "llm_agent_gt",
+    "llm_agent_solo",
+    "discrete_time_audio_native_agent"
+  ],
+  "users": [
+    "user_simulator",
+    "dummy_user"
+  ],
+  "task_sets": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom_full",
+    "telecom_small",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ]
+}
+╭────────────────────────── Simulation Configuration ──────────────────────────╮
+│ Domain: retail  Task Set: Default  Tasks: All                                │
+│ Trials: 1  Max Steps: 200  Max Errors: 10                                    │
+│                                                                              │
+│ Agent: llm_agent → hosted_vllm/qwen2.5-7b-instruct                           │
+│ User:  user_simulator → o4-mini                                              │
+│                                                                              │
+│ Save: qwen2.5-7b-instruct/clean/seed_2_0_10_119147_  Concurrency: 3          │
+│ Verbose: False                                                               │
+╰──────────────────────────────────────────────────────────────────────────────╯
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-05-19 09:59:18.039 | ERROR    | tau2.utils.utils:get_commit_hash:102 - Failed to get git hash: Command '['git', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+0/11 (trial 1/1). Running task 0, trial 1
+1/11 (trial 1/1). Running task 1, trial 1
+2/11 (trial 1/1). Running task 2, trial 1
+2026-05-19 09:59:22.246 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:22.634 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:23.580 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:24.925 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:25.329 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:25.642 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:27.888 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:30.093 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:30.226 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:30.534 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:32.157 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:32.403 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:34.655 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:34.729 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:34.952 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:35.075 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:37.157 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:37.635 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:39.061 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:42.175 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:44.093 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:44.399 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:44.909 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 2                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 25.51s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0159                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 0.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_product_details [read] ❌ 0.0                                 │
+│ - 2: agent get_product_details [read] ❌ 0.0                                 │
+│ - 3: agent get_user_details [read] ❌ 0.0                                    │
+│ - 4: agent get_order_details [read] ❌ 0.0                                   │
+│ - 5: agent get_order_details [read] ❌ 0.0                                   │
+│ - 6: agent get_order_details [read] ❌ 0.0                                   │
+│ - 7: agent get_order_details [read] ❌ 0.0                                   │
+│ - 8: agent get_order_details [read] ❌ 0.0                                   │
+│ - 9: agent get_product_details [read] ❌ 0.0                                 │
+│ - 10: agent return_delivered_order_items [write] ❌ 0.0                      │
+│                                                                              │
+│ Partial Action Reward: 1/11 (9.1%)                                           │
+│   Read:  1/10 (10.0%)                                                        │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Communicate Checks:                                                          │
+│ - 0: 10 ✅                                                                   │
+│                                                                              │
+│ NL Assertions:                                                               │
+│ - 0: Agent should tell the user that there are 10 t-shirt options available. │
+│ ❌                                                                           │
+│         The agent did not provide the user with the number of T-shirt styles │
+│ available in the online store. Instead, the agent focused on verifying the   │
+│ user's identity and processing the return request, but never answered the    │
+│ user's first question about T-shirt styles.                                  │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: None                                                                     │
+│ communicate: None                                                            │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+3/11 (trial 1/1). Running task 3, trial 1
+2026-05-19 09:59:47.447 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:47.895 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:47.918 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 1/11 complete. Avg reward: 0.00 (N=1). 3 running: 0.0(30s), 1.0(30s), 
+3.0(3s)
+2026-05-19 09:59:48.425 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:48.900 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:49.715 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:49.922 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:52.473 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:52.656 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:52.740 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:53.320 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:53.901 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:54.197 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:54.708 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:54.943 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:55.237 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:55.908 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:56.011 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:57.217 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:58.268 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:58.574 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 09:59:58.838 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:01.213 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:01.966 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:02.556 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:03.147 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 10:00:03.405 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 16384 tokens. However, you requested 0 output tokens and your prompt contains at least 16385 input tokens, for a total of at least 16385 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16385)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 0: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 16384 tokens. 
+However, you requested 0 output tokens and your prompt contains at least 16385 
+input tokens, for a total of at least 16385 tokens. Please reduce the length of 
+the input prompt or the number of requested output tokens. 
+(parameter=input_tokens, 
+value=16385)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 10:00:04.584 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:04.992 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:05.100 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 1                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 49.30s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0323                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_order_details [read] ✅ 1.0                                   │
+│ - 2: agent get_product_details [read] ✅ 1.0                                 │
+│ - 3: agent get_product_details [read] ✅ 1.0                                 │
+│ - 4: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 4/5 (80.0%)                                           │
+│   Read:  4/4 (100.0%)                                                        │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+4/11 (trial 1/1). Running task 4, trial 1
+2026-05-19 10:00:07.771 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:08.043 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:08.289 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:10.035 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:10.304 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:11.071 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:11.162 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:11.550 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:11.849 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:12.403 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:12.688 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:12.869 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:13.081 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:14.122 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:14.133 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:17.175 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 2/11 complete. Avg reward: 0.00 (N=2). 3 running: 0.0(15s R1), 3.0(33s),
+4.0(10s)
+2026-05-19 10:00:19.436 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:20.152 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:20.639 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:20.969 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:21.942 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:24.761 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:25.552 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:25.797 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 0                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 22.31s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0109                                                           │
+│ Reward: ✅ 1.0000 (DB: 1.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:✅ 1.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_order_details [read] ✅ 1.0                                   │
+│ - 2: agent get_product_details [read] ✅ 1.0                                 │
+│ - 3: agent get_product_details [read] ✅ 1.0                                 │
+│ - 4: agent exchange_delivered_order_items [write] ✅ 1.0                     │
+│                                                                              │
+│ Partial Action Reward: 5/5 (100.0%)                                          │
+│   Read:  4/4 (100.0%)                                                        │
+│   Write: 1/1 (100.0%)                                                        │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+  Task 0 succeeded on retry 1
+5/11 (trial 1/1). Running task 5, trial 1
+2026-05-19 10:00:27.731 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:28.377 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:28.538 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:28.934 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:29.270 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:31.515 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:34.100 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:34.489 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:35.603 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:35.763 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:35.871 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:36.392 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:37.152 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:37.304 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:38.782 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:38.940 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:40.252 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:40.685 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:41.063 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:41.071 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:41.308 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 3                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 54.96s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0335                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 0.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_product_details [read] ❌ 0.0                                 │
+│ - 2: agent get_product_details [read] ❌ 0.0                                 │
+│ - 3: agent get_user_details [read] ❌ 0.0                                    │
+│ - 4: agent get_order_details [read] ❌ 0.0                                   │
+│ - 5: agent get_order_details [read] ❌ 0.0                                   │
+│ - 6: agent get_order_details [read] ❌ 0.0                                   │
+│ - 7: agent get_order_details [read] ❌ 0.0                                   │
+│ - 8: agent get_order_details [read] ❌ 0.0                                   │
+│ - 9: agent get_product_details [read] ❌ 0.0                                 │
+│ - 10: agent get_user_details [read] ❌ 0.0                                   │
+│ - 11: agent modify_pending_order_items [write] ❌ 0.0                        │
+│                                                                              │
+│ Partial Action Reward: 1/12 (8.3%)                                           │
+│   Read:  1/11 (9.1%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Communicate Checks:                                                          │
+│ - 0: 10 ✅                                                                   │
+│                                                                              │
+│ NL Assertions:                                                               │
+│ - 0: Agent should tell the user that there are 10 t-shirt options available. │
+│ ❌                                                                           │
+│         The agent only stated that there is one product type listed as       │
+│ 'T-Shirt' and did not specify the number of t-shirt styles or options        │
+│ available. The agent did not provide the required information that there are │
+│ 10 t-shirt options available.                                                │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: None                                                                     │
+│ communicate: None                                                            │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+6/11 (trial 1/1). Running task 6, trial 1
+2026-05-19 10:00:41.447 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:41.826 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:42.270 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:42.648 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 4                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 34.99s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.TOO_MANY_ERRORS                        │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0189                                                           │
+│ Reward: ❌ 0.0000 ()                                                         │
+│                                                                              │
+│ Additional Info:                                                             │
+│ note: Simulation terminated prematurely. Termination reason: too_many_errors │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+7/11 (trial 1/1). Running task 7, trial 1
+2026-05-19 10:00:44.644 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:44.920 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:45.196 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:45.964 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:46.658 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 5/11 complete. Avg reward: 0.20 (N=5). 3 running: 5.0(21s), 6.0(7s), 
+7.0(5s)
+2026-05-19 10:00:49.797 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:49.984 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:51.657 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:51.683 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:52.198 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:53.555 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:53.828 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:54.091 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:54.287 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:54.563 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:55.504 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:56.020 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:56.352 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:57.749 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:57.894 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:58.089 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:00:58.116 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 5                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 32.36s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0193                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ❌ 0.0                                    │
+│ - 2: agent get_order_details [read] ❌ 0.0                                   │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent return_delivered_order_items [write] ❌ 0.0                       │
+│                                                                              │
+│ Partial Action Reward: 1/5 (20.0%)                                           │
+│   Read:  1/4 (25.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+8/11 (trial 1/1). Running task 8, trial 1
+2026-05-19 10:01:01.682 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:02.214 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:02.536 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:04.152 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:04.572 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:05.231 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:06.771 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:07.717 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:07.727 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:07.880 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:08.961 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:09.259 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:11.328 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:11.494 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:12.676 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:12.936 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:13.977 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:14.542 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 6/11 complete. Avg reward: 0.17 (N=6). 3 running: 6.0(37s), 7.0(35s), 
+8.0(18s)
+2026-05-19 10:01:18.294 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:18.460 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 6                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 38.51s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0234                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ✅ 1.0                                    │
+│ - 2: agent get_order_details [read] ✅ 1.0                                   │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent get_product_details [read] ❌ 0.0                                 │
+│ - 5: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 3/6 (50.0%)                                           │
+│   Read:  3/5 (60.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+9/11 (trial 1/1). Running task 9, trial 1
+2026-05-19 10:01:20.863 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:21.384 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:21.951 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:23.770 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:23.919 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:24.246 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:25.361 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:27.641 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:28.354 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:28.525 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:29.973 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 7                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 49.04s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0277                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ✅ 1.0                                    │
+│ - 2: agent get_order_details [read] ✅ 1.0                                   │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent get_product_details [read] ❌ 0.0                                 │
+│ - 5: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 3/6 (50.0%)                                           │
+│   Read:  3/5 (60.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+10/11 (trial 1/1). Running task 10, trial 1
+2026-05-19 10:01:32.349 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:32.708 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:32.881 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:33.001 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:35.457 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:35.670 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:36.419 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:36.622 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:38.298 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:38.674 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:39.734 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:39.935 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:40.101 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:43.070 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:43.171 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:43.380 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:43.569 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:43.957 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:44.293 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:44.674 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:44.998 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:45.293 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 8/11 complete. Avg reward: 0.12 (N=8). 3 running: 8.0(48s), 9.0(28s), 
+10.0(16s)
+2026-05-19 10:01:48.820 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:49.204 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:51.924 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:52.254 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:52.504 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:52.992 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:54.786 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:55.927 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:56.445 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:56.820 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:56.970 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:57.272 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:57.661 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:57.936 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:01:58.315 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 10                                                                  │
+│ Trial: 0                                                                     │
+│ Duration: 26.22s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.TOO_MANY_ERRORS                        │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0129                                                           │
+│ Reward: ❌ 0.0000 ()                                                         │
+│                                                                              │
+│ Additional Info:                                                             │
+│ note: Simulation terminated prematurely. Termination reason: too_many_errors │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+2026-05-19 10:01:59.248 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:02:03.234 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:02:05.324 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:02:05.594 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 10:02:09.853 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=qwen2.5-7b-instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 9                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 49.75s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0284                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ✅ 1.0                                    │
+│ - 2: agent get_order_details [read] ❌ 0.0                                   │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent get_product_details [read] ❌ 0.0                                 │
+│ - 5: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 2/6 (33.3%)                                           │
+│   Read:  2/5 (40.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 8                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 76.72s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0385                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ✅ 1.0                                    │
+│ - 2: agent get_order_details [read] ✅ 1.0                                   │
+│ - 3: agent get_product_details [read] ✅ 1.0                                 │
+│ - 4: agent get_product_details [read] ✅ 1.0                                 │
+│ - 5: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 5/6 (83.3%)                                           │
+│   Read:  5/5 (100.0%)                                                        │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+Successfully completed all simulations!
+To review the simulations, run: tau2 view
+╭───────────────────────── Agent Performance Metrics ──────────────────────────╮
+│   ═══ Overview ═══                                                           │
+│   Total Simulations         11                                               │
+│   Total Tasks               11                                               │
+│                                                                              │
+│   ═══ Reward Metrics ═══                                                     │
+│   🏆 Average Reward         0.0909                                           │
+│      Pass^1                 0.091                                            │
+│   💰 Avg Cost/Conversation  $0.0000                                          │
+│                                                                              │
+│   ═══ Action Metrics ═══                                                     │
+│   📖 Read Actions           24/53 (45.3%)                                    │
+│   ✏️  Write Actions         1/9 (11.1%)                                      │
+│                                                                              │
+│   ═══ DB Match ═══                                                           │
+│   🗄️  DB Match              ✓ 1 / ✗ 8 (11.1%)                                │
+│                                                                              │
+│   ═══ Authentication ═══                                                     │
+│      Not Checked            11                                               │
+│                                                                              │
+│   ═══ Termination ═══                                                        │
+│   🛑 Normal Stop            9 (👤 9 / 🤖 0)                                  │
+│   💥 Error                  2                                                │
+│                                                                              │
+│   ═══ LLM Judge Review ═══                                                   │
+│   🤖 Agent Errors           0 errors                                         │
+│      Sims by severity       -                                                │
+│   👤 User Errors            0 errors                                         │
+│      Sims by severity       -                                                │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+tau2-bench ended at: Tue May 19 10:02:16 PDT 2026
+Elapsed seconds: 180
+Elapsed minutes: 3
+Average seconds per episode: 3.60
+Stopping vLLM...
+Job finished at: Tue May 19 10:02:16 PDT 2026

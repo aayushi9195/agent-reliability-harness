@@ -1,0 +1,102 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+==== JOB CONFIG ====
+Model: Qwen/Qwen2.5-7B-Instruct
+Fault: clean
+Seed: 1
+Range: 0 -> 10
+Output: /gpfs/projects/imt526a/group2/agent-reliability/results/Qwen/Qwen2.5-7B-Instruct/clean/seed_1
+/gpfs/home/tpeyton2/tau_runs
+Starting vLLM...
+Waiting for vLLM...
+vLLM ready
+Starting tau2-bench 50-task Qwen calibration...
+2026-05-14 14:06:08.017 | WARNING  | tau2.utils.utils:<module>:15 - No .env file found
+2026-05-14 14:06:08.018 | INFO     | tau2.utils.utils:<module>:28 - Using data directory from source: /gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/data
+2026-05-14 14:06:09.518 | INFO     | tau2.utils.llm_utils:<module>:102 - LiteLLM: Cache is disabled
+2026-05-14 14:06:09.575 | DEBUG    | tau2.registry:<module>:281 - Registering default components...
+2026-05-14 14:06:09.577 | DEBUG    | tau2.registry:<module>:292 - Voice dependencies not installed, skipping voice user registration
+2026-05-14 14:06:09.577 | DEBUG    | tau2.registry:<module>:350 - Default components registered successfully. Registry info: {
+  "domains": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ],
+  "agents": [
+    "llm_agent",
+    "llm_agent_gt",
+    "llm_agent_solo",
+    "discrete_time_audio_native_agent"
+  ],
+  "users": [
+    "user_simulator",
+    "dummy_user"
+  ],
+  "task_sets": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom_full",
+    "telecom_small",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ]
+}
+╭────────────────────────── Simulation Configuration ──────────────────────────╮
+│ Domain: retail  Task Set: Default  Tasks: All                                │
+│ Trials: 1  Max Steps: 200  Max Errors: 10                                    │
+│                                                                              │
+│ Agent: llm_agent → hosted_vllm/Qwen/Qwen2.5-7B-Instruct                      │
+│ User:  user_simulator → gpt-4o-mini                                          │
+│                                                                              │
+│ Save: Not specified  Concurrency: 3  Verbose: False                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-05-14 14:06:09.633 | ERROR    | tau2.utils.utils:get_commit_hash:102 - Failed to get git hash: Command '['git', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+Traceback (most recent call last):
+  File "/gpfs/projects/imt526a/group2/envLLM/bin/tau2", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/src/tau2/cli.py", line 930, in main
+    args.func(args)
+  File "/gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/src/tau2/cli.py", line 675, in run_command
+    return run_domain(config)
+           ^^^^^^^^^^^^^^^^^^
+  File "/gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/src/tau2/runner/batch.py", line 899, in run_domain
+    simulation_results = run_tasks(
+                         ^^^^^^^^^^
+  File "/gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/src/tau2/runner/batch.py", line 580, in run_tasks
+    simulation_results, done_runs, tasks = try_resume(
+                                           ^^^^^^^^^^^
+  File "/gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/src/tau2/runner/checkpoint.py", line 72, in try_resume
+    save_path.parent.mkdir(parents=True, exist_ok=True)
+  File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/data/simulations/20260514_140609_retail_llm_agent_Qwen2.5-7B-Instruct_user_simulator_gpt-4o-mini'

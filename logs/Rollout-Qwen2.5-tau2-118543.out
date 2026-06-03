@@ -1,0 +1,72 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+==== JOB CONFIG ====
+Model: Qwen3-8B
+Fault: clean
+Seed: 2
+Range: 0 -> 10
+Output: /gpfs/projects/imt526a/group2/agent-reliability/results/Qwen3-8B/clean/seed_2
+/gpfs/home/tpeyton2/tau_runs
+Starting vLLM...
+Waiting for vLLM...
+vLLM failed to start
+(APIServer pid=89434) INFO 05-18 09:40:52 [utils.py:299] 
+(APIServer pid=89434) INFO 05-18 09:40:52 [utils.py:299]        █     █     █▄   ▄█
+(APIServer pid=89434) INFO 05-18 09:40:52 [utils.py:299]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.19.1
+(APIServer pid=89434) INFO 05-18 09:40:52 [utils.py:299]   █▄█▀ █     █     █     █  model   /gpfs/projects/imt526a/group2/agent-reliability/models/Qwen3-8B
+(APIServer pid=89434) INFO 05-18 09:40:52 [utils.py:299]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=89434) INFO 05-18 09:40:52 [utils.py:299] 
+(APIServer pid=89434) INFO 05-18 09:40:52 [utils.py:233] non-default args: {'model_tag': '/gpfs/projects/imt526a/group2/agent-reliability/models/Qwen3-8B', 'enable_auto_tool_choice': True, 'tool_call_parser': 'qwen25', 'host': '127.0.0.1', 'api_key': ['local-token'], 'model': '/gpfs/projects/imt526a/group2/agent-reliability/models/Qwen3-8B', 'tokenizer': '/gpfs/projects/imt526a/group2/agent-reliability/models/Qwen3-8B', 'dtype': 'bfloat16', 'max_model_len': 16384, 'served_model_name': ['Qwen3-8B'], 'gpu_memory_utilization': 0.85, 'max_num_seqs': 8}
+(APIServer pid=89434) Traceback (most recent call last):
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/bin/vllm", line 6, in <module>
+(APIServer pid=89434)     sys.exit(main())
+(APIServer pid=89434)              ^^^^^^
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 75, in main
+(APIServer pid=89434)     args.dispatch_function(args)
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 122, in cmd
+(APIServer pid=89434)     uvloop.run(run_server(args))
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=89434)     return __asyncio.run(
+(APIServer pid=89434)            ^^^^^^^^^^^^^^
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/asyncio/runners.py", line 195, in run
+(APIServer pid=89434)     return runner.run(main)
+(APIServer pid=89434)            ^^^^^^^^^^^^^^^^
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=89434)     return self._loop.run_until_complete(task)
+(APIServer pid=89434)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=89434)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=89434)     return await main
+(APIServer pid=89434)            ^^^^^^^^^^
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 671, in run_server
+(APIServer pid=89434)     listen_address, sock = setup_server(args)
+(APIServer pid=89434)                            ^^^^^^^^^^^^^^^^^^
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=89434)     return func(*args, **kwargs)
+(APIServer pid=89434)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 541, in setup_server
+(APIServer pid=89434)     validate_api_server_args(args)
+(APIServer pid=89434)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 512, in validate_api_server_args
+(APIServer pid=89434)     raise KeyError(
+(APIServer pid=89434) KeyError: 'invalid tool call parser: qwen25 (chose from { deepseek_v3,deepseek_v31,deepseek_v32,ernie45,functiongemma,gemma4,gigachat3,glm45,glm47,granite,granite-20b-fc,granite4,hermes,hunyuan_a13b,internlm,jamba,kimi_k2,llama3_json,llama4_json,llama4_pythonic,longcat,minimax,minimax_m2,mistral,olmo3,openai,phi4_mini_json,pythonic,qwen3_coder,qwen3_xml,seed_oss,step3,step3p5,xlam })'

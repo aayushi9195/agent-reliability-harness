@@ -1,6 +1,6 @@
 # Model Failure Appendix
 
-This directory contains derived summaries of model failures from tau2 benchmark runs. Raw rollout and vLLM logs are stored in [logs](C:/jh/LOGS/logs), and the appendix files were generated with [summarize_errors.py](C:/jh/LOGS/summarize_errors.py).
+This directory contains derived summaries of model failures from tau2 benchmark runs. Raw rollout and vLLM logs are stored in [logs](logs/), and the appendix files were generated with [summarize_errors.py](metrics/summarize_errors.py).
 
 ## Contents
 
@@ -17,7 +17,7 @@ This directory contains derived summaries of model failures from tau2 benchmark 
 
 ## Scope
 
-The failure inventory scans `*.out`, `*.log`, and `*.txt` files in [logs](C:/jh/LOGS/logs). It extracts timestamped error records, groups them by model, deduplicates repeated error messages, and attaches available run configuration from the top of each log.
+The failure inventory scans `*.out`, `*.log`, and `*.txt` files in [logs](logs/). It extracts timestamped error records, groups them by model, deduplicates repeated error messages, and attaches available run configuration from the top of each log.
 
 The following recurring LiteLLM cost-accounting message is intentionally excluded because it does not indicate a run failure:
 

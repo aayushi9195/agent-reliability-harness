@@ -1,0 +1,34 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+==== JOB CONFIG ====
+Model: Qwen/Qwen2.5-7B-Instruct
+Fault: clean
+Seed: 1
+Range: 0 -> 10
+Output: /gpfs/projects/imt526a/group2/agent-reliability/results/Qwen/Qwen2.5-7B-Instruct/clean/seed_1
+Starting vLLM...
+Waiting for vLLM...
+vLLM ready
+Starting rollout...
+python: can't open file '/gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/run.py': [Errno 2] No such file or directory

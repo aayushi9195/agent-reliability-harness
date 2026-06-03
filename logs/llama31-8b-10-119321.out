@@ -1,0 +1,847 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+Started: Tue May 19 16:03:33 PDT 2026
+Tue May 19 16:03:33 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.71.05              Driver Version: 595.71.05      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H200                    On  |   00000000:4C:00.0 Off |                    0 |
+| N/A   33C    P0             78W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+vLLM ready: Tue May 19 16:04:13 PDT 2026
+2026-05-19 16:04:13.660 | WARNING  | tau2.utils.utils:<module>:15 - No .env file found
+2026-05-19 16:04:13.660 | INFO     | tau2.utils.utils:<module>:28 - Using data directory from source: /gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/data
+2026-05-19 16:04:15.632 | INFO     | tau2.utils.llm_utils:<module>:102 - LiteLLM: Cache is disabled
+2026-05-19 16:04:15.692 | DEBUG    | tau2.registry:<module>:281 - Registering default components...
+2026-05-19 16:04:15.694 | DEBUG    | tau2.registry:<module>:292 - Voice dependencies not installed, skipping voice user registration
+2026-05-19 16:04:15.694 | DEBUG    | tau2.registry:<module>:350 - Default components registered successfully. Registry info: {
+  "domains": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ],
+  "agents": [
+    "llm_agent",
+    "llm_agent_gt",
+    "llm_agent_solo",
+    "discrete_time_audio_native_agent"
+  ],
+  "users": [
+    "user_simulator",
+    "dummy_user"
+  ],
+  "task_sets": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom_full",
+    "telecom_small",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ]
+}
+╭────────────────────────── Simulation Configuration ──────────────────────────╮
+│ Domain: retail  Task Set: Default  Tasks: All                                │
+│ Trials: 1  Max Steps: 300  Max Errors: 10                                    │
+│                                                                              │
+│ Agent: llm_agent → hosted_vllm/meta-llama/Llama-3.1-8B-Instruct              │
+│ User:  user_simulator → gpt-4o-mini                                          │
+│                                                                              │
+│ Save: Not specified  Concurrency: 3  Verbose: False                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+0/10 (trial 1/1). Running task 0, trial 1
+2/10 (trial 1/1). Running task 2, trial 1
+1/10 (trial 1/1). Running task 1, trial 1
+2026-05-19 16:04:18.095 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:18.330 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:18.338 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:18.417 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:18.624 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:18.887 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:18.973 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:19.029 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:19.156 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:19.191 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:19.300 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:19.391 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:19.427 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:19.582 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:20.003 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:20.109 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 0                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 4.34s                                                              │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0002                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ❌ 0.0                            │
+│ - 1: agent get_order_details [read] ✅ 1.0                                   │
+│ - 2: agent get_product_details [read] ❌ 0.0                                 │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 1/5 (20.0%)                                           │
+│   Read:  1/4 (25.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+3/10 (trial 1/1). Running task 3, trial 1
+2026-05-19 16:04:20.577 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:20.766 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 1                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 5.85s                                                              │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0002                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_order_details [read] ✅ 1.0                                   │
+│ - 2: agent get_product_details [read] ✅ 1.0                                 │
+│ - 3: agent get_product_details [read] ✅ 1.0                                 │
+│ - 4: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 4/5 (80.0%)                                           │
+│   Read:  4/4 (100.0%)                                                        │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+4/10 (trial 1/1). Running task 4, trial 1
+2026-05-19 16:04:22.021 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:22.295 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:22.474 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:22.504 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:22.618 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:23.517 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:23.777 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:23.958 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:24.225 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 3                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 3.16s                                                              │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0001                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 0.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ❌ 0.0                            │
+│ - 1: agent get_product_details [read] ❌ 0.0                                 │
+│ - 2: agent get_product_details [read] ❌ 0.0                                 │
+│ - 3: agent get_user_details [read] ❌ 0.0                                    │
+│ - 4: agent get_order_details [read] ❌ 0.0                                   │
+│ - 5: agent get_order_details [read] ❌ 0.0                                   │
+│ - 6: agent get_order_details [read] ❌ 0.0                                   │
+│ - 7: agent get_order_details [read] ❌ 0.0                                   │
+│ - 8: agent get_order_details [read] ❌ 0.0                                   │
+│ - 9: agent get_product_details [read] ❌ 0.0                                 │
+│ - 10: agent get_user_details [read] ❌ 0.0                                   │
+│ - 11: agent modify_pending_order_items [write] ❌ 0.0                        │
+│                                                                              │
+│ Partial Action Reward: 0/12 (0.0%)                                           │
+│   Read:  0/11 (0.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Communicate Checks:                                                          │
+│ - 0: 10 ❌                                                                   │
+│                                                                              │
+│ NL Assertions:                                                               │
+│ - 0: Agent should tell the user that there are 10 t-shirt options available. │
+│ ❌                                                                           │
+│         The agent did not provide the user with the information that there   │
+│ are 10 t-shirt options available. Instead, the agent responded with 'None'   │
+│ and then transferred the user to a human agent without addressing the        │
+│ question correctly.                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: None                                                                     │
+│ communicate: None                                                            │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+5/10 (trial 1/1). Running task 5, trial 1
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 4                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 3.10s                                                              │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0001                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 0.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ❌ 0.0                            │
+│ - 1: agent get_product_details [read] ❌ 0.0                                 │
+│ - 2: agent get_product_details [read] ❌ 0.0                                 │
+│ - 3: agent get_user_details [read] ❌ 0.0                                    │
+│ - 4: agent get_order_details [read] ❌ 0.0                                   │
+│ - 5: agent get_order_details [read] ❌ 0.0                                   │
+│ - 6: agent get_order_details [read] ❌ 0.0                                   │
+│ - 7: agent get_order_details [read] ❌ 0.0                                   │
+│ - 8: agent get_order_details [read] ❌ 0.0                                   │
+│ - 9: agent get_product_details [read] ❌ 0.0                                 │
+│ - 10: agent get_user_details [read] ❌ 0.0                                   │
+│ - 11: agent modify_pending_order_items [write] ❌ 0.0                        │
+│ - 12: agent modify_pending_order_items [write] ❌ 0.0                        │
+│                                                                              │
+│ Partial Action Reward: 0/13 (0.0%)                                           │
+│   Read:  0/11 (0.0%)                                                         │
+│   Write: 0/2 (0.0%)                                                          │
+│                                                                              │
+│ Communicate Checks:                                                          │
+│ - 0: 10 ❌                                                                   │
+│                                                                              │
+│ NL Assertions:                                                               │
+│ - 0: Agent should tell the user that there are 10 t-shirt options available. │
+│ ❌                                                                           │
+│         The agent did not provide any information about the number of        │
+│ t-shirt options available. Instead, the agent attempted to process the       │
+│ request, encountered errors, and then transferred the user to a human agent  │
+│ without addressing the user's question.                                      │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: None                                                                     │
+│ communicate: None                                                            │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+6/10 (trial 1/1). Running task 6, trial 1
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 2                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 9.56s                                                              │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0004                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 0.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ❌ 0.0                            │
+│ - 1: agent get_product_details [read] ❌ 0.0                                 │
+│ - 2: agent get_product_details [read] ✅ 1.0                                 │
+│ - 3: agent get_user_details [read] ❌ 0.0                                    │
+│ - 4: agent get_order_details [read] ❌ 0.0                                   │
+│ - 5: agent get_order_details [read] ❌ 0.0                                   │
+│ - 6: agent get_order_details [read] ❌ 0.0                                   │
+│ - 7: agent get_order_details [read] ❌ 0.0                                   │
+│ - 8: agent get_order_details [read] ❌ 0.0                                   │
+│ - 9: agent get_product_details [read] ✅ 1.0                                 │
+│ - 10: agent return_delivered_order_items [write] ❌ 0.0                      │
+│                                                                              │
+│ Partial Action Reward: 2/11 (18.2%)                                          │
+│   Read:  2/10 (20.0%)                                                        │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Communicate Checks:                                                          │
+│ - 0: 10 ❌                                                                   │
+│                                                                              │
+│ NL Assertions:                                                               │
+│ - 0: Agent should tell the user that there are 10 t-shirt options available. │
+│ ❌                                                                           │
+│         The agent did not provide the user with the information about the    │
+│ number of t-shirt options available. The agent only transferred the user to  │
+│ a human agent and did not address the t-shirt inquiry directly.              │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: None                                                                     │
+│ communicate: None                                                            │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+7/10 (trial 1/1). Running task 7, trial 1
+2026-05-19 16:04:27.831 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:27.846 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:28.185 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:28.194 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:04:28.398 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:28.406 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:28.464 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:28.600 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:28.608 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:28.803 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:28.811 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:28.879 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:29.017 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:29.153 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:29.215 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:29.459 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:29.482 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:30.083 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:30.406 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:30.625 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:30.726 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:30.975 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:31.028 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:31.575 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:32.042 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:32.163 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:32.451 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:32.572 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:32.981 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:33.206 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:33.731 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:33.746 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:34.145 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:34.295 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:34.662 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:35.105 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:35.296 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:35.602 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:35.840 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:36.290 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:36.503 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:04:36.604 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains at least 8193 input tokens, for a total of at least 8193 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8193)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 7: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains at least 8193 
+input tokens, for a total of at least 8193 tokens. Please reduce the length of 
+the input prompt or the number of requested output tokens. 
+(parameter=input_tokens, 
+value=8193)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:04:37.540 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:37.590 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:37.919 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:37.965 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 5                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 13.52s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0008                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ❌ 0.0                                    │
+│ - 2: agent get_order_details [read] ❌ 0.0                                   │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent return_delivered_order_items [write] ❌ 0.0                       │
+│                                                                              │
+│ Partial Action Reward: 1/5 (20.0%)                                           │
+│   Read:  1/4 (25.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+8/10 (trial 1/1). Running task 8, trial 1
+2026-05-19 16:04:38.854 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:38.931 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:39.205 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:39.416 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:39.466 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:39.633 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:39.783 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:39.901 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:39.999 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:40.197 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:40.513 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:40.795 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:40.874 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:41.142 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:41.479 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 6                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 15.49s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0011                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ✅ 1.0                                    │
+│ - 2: agent get_order_details [read] ✅ 1.0                                   │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent get_product_details [read] ❌ 0.0                                 │
+│ - 5: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 3/6 (50.0%)                                           │
+│   Read:  3/5 (60.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+9/10 (trial 1/1). Running task 9, trial 1
+2026-05-19 16:04:42.104 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:42.445 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:42.527 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:42.997 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:44.251 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:44.440 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:44.658 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:44.841 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:44.856 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:44.918 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:45.166 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:45.486 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 7/10 complete. Avg reward: 0.00 (N=7). 3 running: 7.0(9s R1), 8.0(7s), 
+9.0(4s)
+2026-05-19 16:04:45.856 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:45.931 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:46.126 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:46.256 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:46.617 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 7                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 9.10s                                                              │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0006                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ❌ 0.0                                    │
+│ - 2: agent get_order_details [read] ❌ 0.0                                   │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent get_product_details [read] ❌ 0.0                                 │
+│ - 5: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 1/6 (16.7%)                                           │
+│   Read:  1/5 (20.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+  Task 7 succeeded on retry 1
+2026-05-19 16:04:46.931 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:47.582 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:47.857 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:48.106 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:48.226 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:48.898 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:49.182 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:49.554 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:50.317 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:04:51.286 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:51.588 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:51.866 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:52.802 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:53.216 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:53.840 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:54.080 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:55.304 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:55.563 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:04:55.664 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains at least 8193 input tokens, for a total of at least 8193 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8193)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 8: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains at least 8193 
+input tokens, for a total of at least 8193 tokens. Please reduce the length of 
+the input prompt or the number of requested output tokens. 
+(parameter=input_tokens, 
+value=8193)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:04:55.786 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:57.559 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:58.142 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:58.342 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:58.554 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:58.734 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:58.758 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:59.070 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:59.266 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:59.334 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 9                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 17.46s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.TOO_MANY_ERRORS                        │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0009                                                           │
+│ Reward: ❌ 0.0000 ()                                                         │
+│                                                                              │
+│ Additional Info:                                                             │
+│ note: Simulation terminated prematurely. Termination reason: too_many_errors │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+2026-05-19 16:04:59.486 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:04:59.701 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:00.016 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:00.262 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:01.344 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:01.603 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:02.844 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:03.258 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:04.701 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:05.234 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:07.966 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:08.476 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:09.788 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:10.385 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:05:12.753 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=meta-llama/Llama-3.1-8B-Instruct, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 8                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 16.04s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.TOO_MANY_ERRORS                        │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0008                                                           │
+│ Reward: ❌ 0.0000 ()                                                         │
+│                                                                              │
+│ Additional Info:                                                             │
+│ note: Simulation terminated prematurely. Termination reason: too_many_errors │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+  Task 8 succeeded on retry 1
+
+Successfully completed all simulations!
+To review the simulations, run: tau2 view
+╭───────────────────────── Agent Performance Metrics ──────────────────────────╮
+│   ═══ Overview ═══                                                           │
+│   Total Simulations         10                                               │
+│   Total Tasks               10                                               │
+│                                                                              │
+│   ═══ Reward Metrics ═══                                                     │
+│   🏆 Average Reward         0.0000                                           │
+│      Pass^1                 0.000                                            │
+│   💰 Avg Cost/Conversation  $0.0000                                          │
+│                                                                              │
+│   ═══ Action Metrics ═══                                                     │
+│   📖 Read Actions           12/54 (22.2%)                                    │
+│   ✏️  Write Actions         0/9 (0.0%)                                       │
+│                                                                              │
+│   ═══ DB Match ═══                                                           │
+│   🗄️  DB Match              ✓ 0 / ✗ 8 (0.0%)                                 │
+│                                                                              │
+│   ═══ Authentication ═══                                                     │
+│      Not Checked            10                                               │
+│                                                                              │
+│   ═══ Termination ═══                                                        │
+│   🛑 Normal Stop            8 (👤 8 / 🤖 0)                                  │
+│   💥 Error                  2                                                │
+│                                                                              │
+│   ═══ LLM Judge Review ═══                                                   │
+│   🤖 Agent Errors           0 errors                                         │
+│      Sims by severity       -                                                │
+│   👤 User Errors            0 errors                                         │
+│      Sims by severity       -                                                │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Elapsed seconds: 60
+Average seconds per episode: 6.0
+Finished: Tue May 19 16:05:13 PDT 2026

@@ -1,0 +1,37 @@
+(APIServer pid=415337) INFO 05-19 09:59:37 [utils.py:299] 
+(APIServer pid=415337) INFO 05-19 09:59:37 [utils.py:299]        █     █     █▄   ▄█
+(APIServer pid=415337) INFO 05-19 09:59:37 [utils.py:299]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.19.1
+(APIServer pid=415337) INFO 05-19 09:59:37 [utils.py:299]   █▄█▀ █     █     █     █  model   Qwen/Qwen3-14B
+(APIServer pid=415337) INFO 05-19 09:59:37 [utils.py:299]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=415337) INFO 05-19 09:59:37 [utils.py:299] 
+(APIServer pid=415337) INFO 05-19 09:59:37 [utils.py:233] non-default args: {'model_tag': 'Qwen/Qwen3-14B', 'default_chat_template_kwargs': {'enable_thinking': False}, 'enable_auto_tool_choice': True, 'tool_call_parser': 'hermes', 'host': '127.0.0.1', 'api_key': ['local-token'], 'model': 'Qwen/Qwen3-14B', 'dtype': 'bfloat16', 'enforce_eager': True, 'served_model_name': ['Qwen/Qwen3-14B'], 'generation_config': 'vllm', 'reasoning_parser': 'qwen3'}
+(APIServer pid=415337) Traceback (most recent call last):
+(APIServer pid=415337)   File "/gpfs/projects/imt526a/group2/envLLM/bin/vllm", line 6, in <module>
+(APIServer pid=415337)     sys.exit(main())
+(APIServer pid=415337)              ^^^^^^
+(APIServer pid=415337)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 75, in main
+(APIServer pid=415337)     args.dispatch_function(args)
+(APIServer pid=415337)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 122, in cmd
+(APIServer pid=415337)     uvloop.run(run_server(args))
+(APIServer pid=415337)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=415337)     return __asyncio.run(
+(APIServer pid=415337)            ^^^^^^^^^^^^^^
+(APIServer pid=415337)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/asyncio/runners.py", line 195, in run
+(APIServer pid=415337)     return runner.run(main)
+(APIServer pid=415337)            ^^^^^^^^^^^^^^^^
+(APIServer pid=415337)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=415337)     return self._loop.run_until_complete(task)
+(APIServer pid=415337)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=415337)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=415337)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=415337)     return await main
+(APIServer pid=415337)            ^^^^^^^^^^
+(APIServer pid=415337)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 671, in run_server
+(APIServer pid=415337)     listen_address, sock = setup_server(args)
+(APIServer pid=415337)                            ^^^^^^^^^^^^^^^^^^
+(APIServer pid=415337)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 550, in setup_server
+(APIServer pid=415337)     sock = create_server_socket(sock_addr)
+(APIServer pid=415337)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=415337)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 498, in create_server_socket
+(APIServer pid=415337)     sock.bind(addr)
+(APIServer pid=415337) OSError: [Errno 98] Address already in use

@@ -17,6 +17,8 @@ data/
 metrics/*.json
 *.log
 *.out
+!logs/
+!logs/**
 
 # Nested upstream/vendor checkouts
 repos/

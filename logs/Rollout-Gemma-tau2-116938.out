@@ -1,0 +1,1081 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+==== JOB CONFIG ====
+Model: gemma-2-9b-it
+Fault: clean
+Seed: 1
+Range: 0 -> 10
+Output: /gpfs/projects/imt526a/group2/agent-reliability/results/gemma-2-9b-it/clean/seed_1
+/gpfs/home/tpeyton2/tau_runs
+Starting vLLM...
+Waiting for vLLM...
+vLLM ready
+Computed task count: 11
+Starting tau2-bench 50-task Mistral-7B-Instruct-v0.1 calibration...
+2026-05-15 15:00:52.365 | WARNING  | tau2.utils.utils:<module>:15 - No .env file found
+2026-05-15 15:00:52.365 | INFO     | tau2.utils.utils:<module>:28 - Using data directory from source: /gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/data
+2026-05-15 15:00:54.017 | INFO     | tau2.utils.llm_utils:<module>:102 - LiteLLM: Cache is disabled
+2026-05-15 15:00:54.138 | DEBUG    | tau2.registry:<module>:281 - Registering default components...
+2026-05-15 15:00:54.150 | DEBUG    | tau2.registry:<module>:292 - Voice dependencies not installed, skipping voice user registration
+2026-05-15 15:00:54.151 | DEBUG    | tau2.registry:<module>:350 - Default components registered successfully. Registry info: {
+  "domains": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ],
+  "agents": [
+    "llm_agent",
+    "llm_agent_gt",
+    "llm_agent_solo",
+    "discrete_time_audio_native_agent"
+  ],
+  "users": [
+    "user_simulator",
+    "dummy_user"
+  ],
+  "task_sets": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom_full",
+    "telecom_small",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ]
+}
+╭────────────────────────── Simulation Configuration ──────────────────────────╮
+│ Domain: retail  Task Set: Default  Tasks: All                                │
+│ Trials: 1  Max Steps: 200  Max Errors: 10                                    │
+│                                                                              │
+│ Agent: llm_agent → hosted_vllm/gemma-2-9b-it                                 │
+│ User:  user_simulator → o4-mini                                              │
+│                                                                              │
+│ Save: gemma-2-9b-it/clean/seed_1_0_10_116938_  Concurrency: 3  Verbose:      │
+│ False                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-05-15 15:00:54.235 | ERROR    | tau2.utils.utils:get_commit_hash:102 - Failed to get git hash: Command '['git', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+0/11 (trial 1/1). Running task 0, trial 1
+1/11 (trial 1/1). Running task 1, trial 1
+2/11 (trial 1/1). Running task 2, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:00.344 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 2: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:01.310 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 1: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:01.439 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 0: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:05.394 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 2: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:07.711 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 1: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:07.831 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 0: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:10.480 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 2: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:13.557 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 1: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:13.698 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 0: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:17.167 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:01:17.172 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 2 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 2 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+3/11 (trial 1/1). Running task 3, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:18.738 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:01:18.744 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 0 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 0 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+4/11 (trial 1/1). Running task 4, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:21.452 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:01:21.458 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 1 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 1 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+5/11 (trial 1/1). Running task 5, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:22.000 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 3: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:22.956 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 4: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+Status: 3/11 complete. Avg reward: N/A. 3 running: 3.0(2s R1), 4.0(1s R1), 
+5.0(3s)
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:26.530 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 3: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:28.217 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 4: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:28.466 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 5: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:31.658 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 3: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:33.778 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 4: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:36.556 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 5: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:37.841 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:01:37.847 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 3 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 3 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+6/11 (trial 1/1). Running task 6, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:40.081 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:01:40.086 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 4 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 4 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+7/11 (trial 1/1). Running task 7, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:41.318 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 5: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:43.378 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 7: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:43.870 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 6: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:46.257 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:01:46.262 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 5 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 5 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+8/11 (trial 1/1). Running task 8, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:49.013 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 6: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:51.031 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 8: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:51.730 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 7: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+Status: 6/11 complete. Avg reward: N/A. 3 running: 6.0(5s R2), 7.0(3s R2), 
+8.0(3s R1)
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:56.555 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 7: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:57.051 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 8: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:01:57.242 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 6: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:00.811 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:02:00.817 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 7 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 7 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+9/11 (trial 1/1). Running task 9, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:01.161 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:02:01.167 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 6 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 6 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+10/11 (trial 1/1). Running task 10, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:03.384 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 8: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:05.666 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 9: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:07.230 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 1/3 for task 10: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:08.753 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:02:08.759 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 8 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 8 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:10.889 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 9: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:13.326 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 2/3 for task 10: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:18.707 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 9: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:21.325 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Retry 3/3 for task 10: litellm.BadRequestError: Hosted_vllmException - 
+{"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:23.013 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:02:23.019 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 9 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 9 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+Status: 10/11 complete. Avg reward: N/A. 1 running: 10.0(3s R3)
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-15 15:02:26.390 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+2026-05-15 15:02:26.395 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 10 failed after 4 attempts: litellm.BadRequestError: Hosted_vllmException - {"error":{"message":"System role not supported","type":"BadRequestError","param":null,"code":400}}
+
+  Task 10 failed permanently after 4 attempts: litellm.BadRequestError: 
+Hosted_vllmException - {"error":{"message":"System role not 
+supported","type":"BadRequestError","param":null,"code":400}}
+
+Successfully completed all simulations!
+To review the simulations, run: tau2 view
+╭───────────────────────── Agent Performance Metrics ──────────────────────────╮
+│   ═══ Overview ═══                                                           │
+│   Total Simulations         11                                               │
+│   ⚠️  Infra Errors          11 (excluded from metrics below)                 │
+│   Evaluated                 0                                                │
+│   Total Tasks               0                                                │
+│                                                                              │
+│   ═══ Reward Metrics ═══                                                     │
+│   🏆 Average Reward         0.0000                                           │
+│   💰 Avg Cost/Conversation  $0.0000                                          │
+│                                                                              │
+│   ═══ Action Metrics ═══                                                     │
+│   📖 Read Actions           -                                                │
+│   ✏️  Write Actions         -                                                │
+│                                                                              │
+│   ═══ DB Match ═══                                                           │
+│   🗄️  DB Match              Not checked: 0                                   │
+│                                                                              │
+│   ═══ Authentication ═══                                                     │
+│                                                                              │
+│   ═══ Termination ═══                                                        │
+│   🛑 Normal Stop            0 (👤 0 / 🤖 0)                                  │
+│                                                                              │
+│   ═══ LLM Judge Review ═══                                                   │
+│                             No review data available                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+tau2-bench ended at: Fri May 15 15:02:27 PDT 2026
+Elapsed seconds: 96
+Elapsed minutes: 1
+Average seconds per episode: 1.92
+Stopping vLLM...
+Job finished at: Fri May 15 15:02:27 PDT 2026

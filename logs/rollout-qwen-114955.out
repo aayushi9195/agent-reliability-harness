@@ -1,0 +1,32 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+==== JOB CONFIG ====
+Model: mistralai/Mistral-7B-Instruct-v0.1
+Fault: clean
+Seed: 2
+Range: 0 -> 10
+Output: /gpfs/projects/imt526a/group2/agent-reliability/results/mistralai/Mistral-7B-Instruct-v0.1/clean/seed_2
+Starting vLLM...
+Waiting for vLLM...
+[2026-05-13T21:14:32.049] error: *** JOB 114955 ON g006 CANCELLED AT 2026-05-13T21:14:32 DUE to SIGNAL Terminated ***

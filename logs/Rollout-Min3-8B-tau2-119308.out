@@ -1,0 +1,90 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+==== JOB CONFIG ====
+Model: Mixtral-8x7B-Instruct-v0
+Fault: clean
+Seed: 2
+Range: 0 -> 10
+Output: /gpfs/projects/imt526a/group2/agent-reliability/results/Mixtral-8x7B-Instruct-v0/clean/seed_2
+/gpfs/home/tpeyton2/tau_runs
+Starting vLLM...
+Waiting for vLLM...
+vLLM failed to start
+(APIServer pid=2356208) INFO 05-19 15:37:29 [utils.py:299] 
+(APIServer pid=2356208) INFO 05-19 15:37:29 [utils.py:299]        █     █     █▄   ▄█
+(APIServer pid=2356208) INFO 05-19 15:37:29 [utils.py:299]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.19.1
+(APIServer pid=2356208) INFO 05-19 15:37:29 [utils.py:299]   █▄█▀ █     █     █     █  model   /gpfs/projects/imt526a/group2/agent-reliability/models/Mixtral-8x7B-Instruct-v0
+(APIServer pid=2356208) INFO 05-19 15:37:29 [utils.py:299]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=2356208) INFO 05-19 15:37:29 [utils.py:299] 
+(APIServer pid=2356208) INFO 05-19 15:37:29 [utils.py:233] non-default args: {'model_tag': '/gpfs/projects/imt526a/group2/agent-reliability/models/Mixtral-8x7B-Instruct-v0', 'enable_auto_tool_choice': True, 'tool_call_parser': 'hermes', 'host': '127.0.0.1', 'api_key': ['local-token'], 'model': '/gpfs/projects/imt526a/group2/agent-reliability/models/Mixtral-8x7B-Instruct-v0', 'dtype': 'bfloat16', 'max_model_len': 16384, 'served_model_name': ['Mixtral-8x7B-Instruct-v0'], 'tensor_parallel_size': 2, 'gpu_memory_utilization': 0.92, 'max_num_batched_tokens': 8192, 'max_num_seqs': 1}
+(APIServer pid=2356208) INFO 05-19 15:37:29 [model.py:549] Resolved architecture: MixtralForCausalLM
+(APIServer pid=2356208) INFO 05-19 15:37:29 [model.py:1678] Using max model len 16384
+(APIServer pid=2356208) Traceback (most recent call last):
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/bin/vllm", line 6, in <module>
+(APIServer pid=2356208)     sys.exit(main())
+(APIServer pid=2356208)              ^^^^^^
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 75, in main
+(APIServer pid=2356208)     args.dispatch_function(args)
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 122, in cmd
+(APIServer pid=2356208)     uvloop.run(run_server(args))
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=2356208)     return __asyncio.run(
+(APIServer pid=2356208)            ^^^^^^^^^^^^^^
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/asyncio/runners.py", line 195, in run
+(APIServer pid=2356208)     return runner.run(main)
+(APIServer pid=2356208)            ^^^^^^^^^^^^^^^^
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=2356208)     return self._loop.run_until_complete(task)
+(APIServer pid=2356208)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2356208)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=2356208)     return await main
+(APIServer pid=2356208)            ^^^^^^^^^^
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 672, in run_server
+(APIServer pid=2356208)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 686, in run_server_worker
+(APIServer pid=2356208)     async with build_async_engine_client(
+(APIServer pid=2356208)                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=2356208)     return await anext(self.gen)
+(APIServer pid=2356208)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 100, in build_async_engine_client
+(APIServer pid=2356208)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=2356208)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=2356208)     return await anext(self.gen)
+(APIServer pid=2356208)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 124, in build_async_engine_client_from_engine_args
+(APIServer pid=2356208)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+(APIServer pid=2356208)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 1758, in create_engine_config
+(APIServer pid=2356208)     parallel_config = ParallelConfig(
+(APIServer pid=2356208)                       ^^^^^^^^^^^^^^^
+(APIServer pid=2356208)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/pydantic/_internal/_dataclasses.py", line 121, in __init__
+(APIServer pid=2356208)     s.__pydantic_validator__.validate_python(ArgsKwargs(args, kwargs), self_instance=s)
+(APIServer pid=2356208) pydantic_core._pydantic_core.ValidationError: 1 validation error for ParallelConfig
+(APIServer pid=2356208)   Value error, World size (2) is larger than the number of available GPUs (1) in this node. If this is intentional and you are using:
+(APIServer pid=2356208) - ray, set '--distributed-executor-backend ray'.
+(APIServer pid=2356208) - multiprocessing, set '--nnodes' appropriately. [type=value_error, input_value=ArgsKwargs((), {'pipeline...'_api_process_rank': 0}), input_type=ArgsKwargs]
+(APIServer pid=2356208)     For further information visit https://errors.pydantic.dev/2.12/v/value_error

@@ -1,0 +1,1798 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+Started: Tue May 19 15:58:56 PDT 2026
+Tue May 19 15:58:56 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.71.05              Driver Version: 595.71.05      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H200                    On  |   00000000:4C:00.0 Off |                    0 |
+| N/A   29C    P0             77W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA H200                    On  |   00000000:DB:00.0 Off |                    0 |
+| N/A   29C    P0             78W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+vLLM ready: Tue May 19 16:00:26 PDT 2026
+2026-05-19 16:00:27.212 | WARNING  | tau2.utils.utils:<module>:15 - No .env file found
+2026-05-19 16:00:27.212 | INFO     | tau2.utils.utils:<module>:28 - Using data directory from source: /gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/data
+2026-05-19 16:00:29.130 | INFO     | tau2.utils.llm_utils:<module>:102 - LiteLLM: Cache is disabled
+2026-05-19 16:00:29.224 | DEBUG    | tau2.registry:<module>:281 - Registering default components...
+2026-05-19 16:00:29.232 | DEBUG    | tau2.registry:<module>:292 - Voice dependencies not installed, skipping voice user registration
+2026-05-19 16:00:29.232 | DEBUG    | tau2.registry:<module>:350 - Default components registered successfully. Registry info: {
+  "domains": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ],
+  "agents": [
+    "llm_agent",
+    "llm_agent_gt",
+    "llm_agent_solo",
+    "discrete_time_audio_native_agent"
+  ],
+  "users": [
+    "user_simulator",
+    "dummy_user"
+  ],
+  "task_sets": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom_full",
+    "telecom_small",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ]
+}
+╭────────────────────────── Simulation Configuration ──────────────────────────╮
+│ Domain: retail  Task Set: Default  Tasks: All                                │
+│ Trials: 1  Max Steps: 300  Max Errors: 10                                    │
+│                                                                              │
+│ Agent: llm_agent → hosted_vllm/mistralai/Mistral-Small-3.2-24B-Instruct-2506 │
+│ User:  user_simulator → gpt-4o-mini                                          │
+│                                                                              │
+│ Save: Not specified  Concurrency: 3  Verbose: False                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+0/10 (trial 1/1). Running task 0, trial 1
+1/10 (trial 1/1). Running task 1, trial 1
+2/10 (trial 1/1). Running task 2, trial 1
+2026-05-19 16:00:33.022 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:33.256 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:33.261 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:33.506 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:34.055 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:34.061 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:34.503 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:36.598 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:36.796 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:37.170 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:37.318 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:37.508 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:38.275 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:38.636 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:00:38.776 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8213 input tokens, for a total of 8213 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8213)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 2: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 8213 input 
+tokens, for a total of 8213 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=8213)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:00:39.596 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:00:39.680 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8690 input tokens, for a total of 8690 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8690)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 1: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 8690 input 
+tokens, for a total of 8690 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=8690)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:00:39.692 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:41.457 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:42.080 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:42.692 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:43.276 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:00:43.356 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8886 input tokens, for a total of 8886 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8886)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 0: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 8886 input 
+tokens, for a total of 8886 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=8886)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:00:43.385 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:44.265 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:44.403 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:45.251 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:46.009 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:46.357 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:47.254 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:47.899 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:47.955 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:48.392 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:00:48.478 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9280 input tokens, for a total of 9280 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9280)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 2/3 for task 2: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9280 input 
+tokens, for a total of 9280 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9280)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:00:50.009 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:50.036 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:00:50.121 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8659 input tokens, for a total of 8659 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8659)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 2/3 for task 1: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 8659 input 
+tokens, for a total of 8659 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=8659)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:00:50.885 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:51.698 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:52.313 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:52.892 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:53.796 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:54.001 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:54.715 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:55.778 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:55.807 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:56.019 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:56.143 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:56.797 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 0                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 12.94s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0005                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ❌ 0.0                            │
+│ - 1: agent get_order_details [read] ✅ 1.0                                   │
+│ - 2: agent get_product_details [read] ✅ 1.0                                 │
+│ - 3: agent get_product_details [read] ✅ 1.0                                 │
+│ - 4: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 3/5 (60.0%)                                           │
+│   Read:  3/4 (75.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+  Task 0 succeeded on retry 1
+3/10 (trial 1/1). Running task 3, trial 1
+2026-05-19 16:00:58.762 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 1/10 complete. Avg reward: 0.00 (N=1). 3 running: 1.0(9s R2), 2.0(11s 
+R2), 3.0(2s)
+2026-05-19 16:00:59.443 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:00:59.513 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:00.037 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:00.123 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9357 input tokens, for a total of 9357 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9357)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 3/3 for task 2: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9357 input 
+tokens, for a total of 9357 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9357)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:01:01.739 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:02.899 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:03.052 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:03.261 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:03.303 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:04.212 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:04.947 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:05.271 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:05.909 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:06.240 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:06.591 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 1                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 15.26s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0007                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ❌ 0.0                            │
+│ - 1: agent get_order_details [read] ✅ 1.0                                   │
+│ - 2: agent get_product_details [read] ✅ 1.0                                 │
+│ - 3: agent get_product_details [read] ✅ 1.0                                 │
+│ - 4: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 3/5 (60.0%)                                           │
+│   Read:  3/4 (75.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+  Task 1 succeeded on retry 2
+4/10 (trial 1/1). Running task 4, trial 1
+2026-05-19 16:01:07.458 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:08.213 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:08.299 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9256 input tokens, for a total of 9256 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9256)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+2026-05-19 16:01:08.305 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 2 failed after 4 attempts: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9256 input tokens, for a total of 9256 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9256)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Task 2 failed permanently after 4 attempts: 
+litellm.ContextWindowExceededError: litellm.BadRequestError: 
+ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This 
+model's maximum context length is 8192 tokens. However, you requested 0 output 
+tokens and your prompt contains 9256 input tokens, for a total of 9256 tokens. 
+Please reduce the length of the input prompt or the number of requested output 
+tokens. (parameter=input_tokens, 
+value=9256)","type":"BadRequestError","param":"input_tokens","code":400}}
+5/10 (trial 1/1). Running task 5, trial 1
+2026-05-19 16:01:08.673 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:08.908 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:08.998 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8480 input tokens, for a total of 8480 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8480)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 3: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 8480 input 
+tokens, for a total of 8480 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=8480)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:01:09.390 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:09.663 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:10.963 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:11.306 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:11.516 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:11.665 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:12.311 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:12.421 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:13.941 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:14.179 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:14.193 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:14.613 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:14.669 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:15.950 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:16.063 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:16.551 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:16.866 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:18.855 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:18.870 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:18.997 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:20.242 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:20.453 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:20.536 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:20.619 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9413 input tokens, for a total of 9413 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9413)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 4: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9413 input 
+tokens, for a total of 9413 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9413)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:01:22.148 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:22.261 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:22.341 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8247 input tokens, for a total of 8247 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8247)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 5: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 8247 input 
+tokens, for a total of 8247 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=8247)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:01:22.508 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:22.886 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:23.347 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:23.981 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:25.388 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:25.641 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:25.727 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9463 input tokens, for a total of 9463 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9463)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 2/3 for task 3: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9463 input 
+tokens, for a total of 9463 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9463)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:01:25.778 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:27.001 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:27.252 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:27.375 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:27.705 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:28.804 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:28.887 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:28.957 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 3/10 complete. Avg reward: 0.00 (N=2). 3 running: 3.0(4s R2), 4.0(9s 
+R1), 5.0(7s R1)
+2026-05-19 16:01:29.583 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:29.666 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:31.049 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:31.218 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:32.672 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:32.854 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:32.936 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8455 input tokens, for a total of 8455 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8455)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 2/3 for task 4: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 8455 input 
+tokens, for a total of 8455 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=8455)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:01:33.862 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:34.027 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:34.654 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:34.998 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:36.213 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:37.559 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:37.895 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:37.980 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9347 input tokens, for a total of 9347 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9347)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 2/3 for task 5: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9347 input 
+tokens, for a total of 9347 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9347)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:01:38.212 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:38.294 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8479 input tokens, for a total of 8479 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8479)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 3/3 for task 3: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 8479 input 
+tokens, for a total of 8479 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=8479)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:01:39.220 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:39.472 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:40.303 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:40.405 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:41.410 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:41.508 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:41.631 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:42.106 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:42.454 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:43.123 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:44.280 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:44.623 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:44.637 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:44.642 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:45.271 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:46.249 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:46.367 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:46.925 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:47.595 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:48.112 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:48.684 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:48.771 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9556 input tokens, for a total of 9556 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9556)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 3/3 for task 4: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9556 input 
+tokens, for a total of 9556 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9556)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:01:49.135 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:50.533 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:50.619 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9447 input tokens, for a total of 9447 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9447)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+2026-05-19 16:01:50.625 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 3 failed after 4 attempts: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9447 input tokens, for a total of 9447 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9447)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Task 3 failed permanently after 4 attempts: 
+litellm.ContextWindowExceededError: litellm.BadRequestError: 
+ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This 
+model's maximum context length is 8192 tokens. However, you requested 0 output 
+tokens and your prompt contains 9447 input tokens, for a total of 9447 tokens. 
+Please reduce the length of the input prompt or the number of requested output 
+tokens. (parameter=input_tokens, 
+value=9447)","type":"BadRequestError","param":"input_tokens","code":400}}
+6/10 (trial 1/1). Running task 6, trial 1
+2026-05-19 16:01:50.865 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:51.099 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:51.538 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:52.467 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:54.233 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:54.388 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:01:54.472 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9413 input tokens, for a total of 9413 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9413)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 3/3 for task 5: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9413 input 
+tokens, for a total of 9413 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9413)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:01:54.682 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:55.060 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:55.429 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:57.458 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:57.461 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:57.581 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:58.781 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:59.127 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:01:59.267 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 4/10 complete. Avg reward: 0.00 (N=2). 3 running: 4.0(11s R3), 5.0(5s 
+R3), 6.0(9s)
+2026-05-19 16:01:59.714 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:00.561 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:01.504 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:01.667 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:02.546 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:03.299 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:04.094 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:04.835 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:05.003 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:05.089 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9482 input tokens, for a total of 9482 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9482)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+2026-05-19 16:02:05.095 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 4 failed after 4 attempts: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9482 input tokens, for a total of 9482 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9482)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Task 4 failed permanently after 4 attempts: 
+litellm.ContextWindowExceededError: litellm.BadRequestError: 
+ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This 
+model's maximum context length is 8192 tokens. However, you requested 0 output 
+tokens and your prompt contains 9482 input tokens, for a total of 9482 tokens. 
+Please reduce the length of the input prompt or the number of requested output 
+tokens. (parameter=input_tokens, 
+value=9482)","type":"BadRequestError","param":"input_tokens","code":400}}
+7/10 (trial 1/1). Running task 7, trial 1
+2026-05-19 16:02:05.510 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:07.292 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:07.475 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:07.546 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:07.564 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9533 input tokens, for a total of 9533 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9533)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 6: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9533 input 
+tokens, for a total of 9533 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9533)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:02:09.089 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:10.023 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:11.036 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:11.479 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:11.912 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:12.725 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:13.130 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:13.633 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:13.637 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:15.024 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:15.128 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:15.885 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:16.089 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:16.838 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:18.855 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:18.883 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:18.960 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9698 input tokens, for a total of 9698 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9698)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:18.972 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 5 failed after 4 attempts: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9698 input tokens, for a total of 9698 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9698)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Task 5 failed permanently after 4 attempts: 
+litellm.ContextWindowExceededError: litellm.BadRequestError: 
+ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This 
+model's maximum context length is 8192 tokens. However, you requested 0 output 
+tokens and your prompt contains 9698 input tokens, for a total of 9698 tokens. 
+Please reduce the length of the input prompt or the number of requested output 
+tokens. (parameter=input_tokens, 
+value=9698)","type":"BadRequestError","param":"input_tokens","code":400}}
+8/10 (trial 1/1). Running task 8, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:19.030 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9374 input tokens, for a total of 9374 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9374)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 1/3 for task 7: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9374 input 
+tokens, for a total of 9374 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9374)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:02:20.598 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:21.993 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:22.120 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:23.001 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:23.921 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:23.925 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:24.635 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:25.243 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:25.465 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:25.952 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:26.034 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:27.392 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:27.478 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9630 input tokens, for a total of 9630 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9630)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 2/3 for task 6: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9630 input 
+tokens, for a total of 9630 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9630)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:02:27.587 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:27.663 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:28.366 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:28.668 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 6/10 complete. Avg reward: 0.00 (N=2). 3 running: 6.0(2s R2), 7.0(10s 
+R1), 8.0(10s)
+2026-05-19 16:02:29.874 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:30.677 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:31.166 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:31.399 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:31.695 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:32.752 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:33.199 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:33.254 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:33.337 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8739 input tokens, for a total of 8739 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8739)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 2/3 for task 7: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 8739 input 
+tokens, for a total of 8739 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=8739)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:02:35.160 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:35.649 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:36.049 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:37.095 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:37.205 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 8                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 18.59s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0010                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ✅ 1.0                                    │
+│ - 2: agent get_order_details [read] ✅ 1.0                                   │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent get_product_details [read] ❌ 0.0                                 │
+│ - 5: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 3/6 (50.0%)                                           │
+│   Read:  3/5 (60.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+9/10 (trial 1/1). Running task 9, trial 1
+2026-05-19 16:02:38.183 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:38.511 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:38.835 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:39.229 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:40.077 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:40.315 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:41.755 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:41.783 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:42.753 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:43.283 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:43.487 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:43.668 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:45.080 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:45.864 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:46.045 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:47.304 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:47.695 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:47.943 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:48.685 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:49.343 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:50.207 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:50.304 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 9492 input tokens, for a total of 9492 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=9492)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 3/3 for task 6: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 9492 input 
+tokens, for a total of 9492 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=9492)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:02:50.317 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:51.193 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:02:51.277 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8674 input tokens, for a total of 8674 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8674)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Retry 3/3 for task 7: litellm.ContextWindowExceededError: 
+litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - 
+{"error":{"message":"This model's maximum context length is 8192 tokens. 
+However, you requested 0 output tokens and your prompt contains 8674 input 
+tokens, for a total of 8674 tokens. Please reduce the length of the input prompt
+or the number of requested output tokens. (parameter=input_tokens, 
+value=8674)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:02:51.783 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:52.566 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 9                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 14.86s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0009                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ✅ 1.0                                    │
+│ - 2: agent get_order_details [read] ❌ 0.0                                   │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent get_product_details [read] ❌ 0.0                                 │
+│ - 5: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 2/6 (33.3%)                                           │
+│   Read:  2/5 (40.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+2026-05-19 16:02:53.837 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:54.137 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:55.002 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:56.065 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:56.413 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:56.530 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:56.933 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:57.466 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:58.273 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:58.862 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+Status: 8/10 complete. Avg reward: 0.00 (N=4). 2 running: 6.0(9s R3), 7.0(8s R3)
+2026-05-19 16:02:59.459 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:02:59.911 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:03:00.647 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:03:01.572 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:03:03.018 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:03:03.331 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+2026-05-19 16:03:03.411 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8392 input tokens, for a total of 8392 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8392)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+2026-05-19 16:03:03.417 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 7 failed after 4 attempts: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains 8392 input tokens, for a total of 8392 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=8392)","type":"BadRequestError","param":"input_tokens","code":400}}
+
+  Task 7 failed permanently after 4 attempts: 
+litellm.ContextWindowExceededError: litellm.BadRequestError: 
+ContextWindowExceededError: Hosted_vllmException - {"error":{"message":"This 
+model's maximum context length is 8192 tokens. However, you requested 0 output 
+tokens and your prompt contains 8392 input tokens, for a total of 8392 tokens. 
+Please reduce the length of the input prompt or the number of requested output 
+tokens. (parameter=input_tokens, 
+value=8392)","type":"BadRequestError","param":"input_tokens","code":400}}
+2026-05-19 16:03:03.852 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:03:05.961 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:03:07.737 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+2026-05-19 16:03:08.102 | ERROR    | tau2.utils.llm_utils:get_response_cost:129 - This model isn't mapped yet. model=mistralai/Mistral-Small-3.2-24B-Instruct-2506, custom_llm_provider=hosted_vllm. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+
+╭──────────────────────────── Simulation Overview ─────────────────────────────╮
+│ Task ID: 6                                                                   │
+│ Trial: 0                                                                     │
+│ Duration: 17.23s                                                             │
+│ Mode: half_duplex                                                            │
+│ Termination Reason: TerminationReason.USER_STOP                              │
+│ Agent Cost: $0.0000                                                          │
+│ User Cost: $0.0011                                                           │
+│ Reward: ❌ 0.0000 (DB: 0.0, NL_ASSERTION: 1.0)                               │
+│                                                                              │
+│ DB Check:❌ 0.0                                                              │
+│                                                                              │
+│ Action Checks:                                                               │
+│ - 0: agent find_user_id_by_name_zip [read] ✅ 1.0                            │
+│ - 1: agent get_user_details [read] ✅ 1.0                                    │
+│ - 2: agent get_order_details [read] ❌ 0.0                                   │
+│ - 3: agent get_product_details [read] ❌ 0.0                                 │
+│ - 4: agent get_product_details [read] ❌ 0.0                                 │
+│ - 5: agent exchange_delivered_order_items [write] ❌ 0.0                     │
+│                                                                              │
+│ Partial Action Reward: 2/6 (33.3%)                                           │
+│   Read:  2/5 (40.0%)                                                         │
+│   Write: 0/1 (0.0%)                                                          │
+│                                                                              │
+│ Additional Info:                                                             │
+│ env: None                                                                    │
+│ nl: {'note': 'No nl_assertions to evaluate'}                                 │
+│ communicate: {'note': 'No communicate_info to evaluate'}                     │
+│ action: None                                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+  Task 6 succeeded on retry 3
+
+Successfully completed all simulations!
+To review the simulations, run: tau2 view
+╭───────────────────────── Agent Performance Metrics ──────────────────────────╮
+│   ═══ Overview ═══                                                           │
+│   Total Simulations         10                                               │
+│   ⚠️  Infra Errors          5 (excluded from metrics below)                  │
+│   Evaluated                 5                                                │
+│   Total Tasks               5                                                │
+│                                                                              │
+│   ═══ Reward Metrics ═══                                                     │
+│   🏆 Average Reward         0.0000                                           │
+│      Pass^1                 0.000                                            │
+│   💰 Avg Cost/Conversation  $0.0000                                          │
+│                                                                              │
+│   ═══ Action Metrics ═══                                                     │
+│   📖 Read Actions           13/23 (56.5%)                                    │
+│   ✏️  Write Actions         0/5 (0.0%)                                       │
+│                                                                              │
+│   ═══ DB Match ═══                                                           │
+│   🗄️  DB Match              ✓ 0 / ✗ 5 (0.0%)                                 │
+│                                                                              │
+│   ═══ Authentication ═══                                                     │
+│      Not Checked            5                                                │
+│                                                                              │
+│   ═══ Termination ═══                                                        │
+│   🛑 Normal Stop            5 (👤 5 / 🤖 0)                                  │
+│   🔌 Infra Error            5                                                │
+│                                                                              │
+│   ═══ LLM Judge Review ═══                                                   │
+│   🤖 Agent Errors           0 errors                                         │
+│      Sims by severity       -                                                │
+│   👤 User Errors            0 errors                                         │
+│      Sims by severity       -                                                │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Elapsed seconds: 163
+Average seconds per episode: 16.3
+Finished: Tue May 19 16:03:09 PDT 2026

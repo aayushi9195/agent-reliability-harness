@@ -1,0 +1,226 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+Job started: Wed May 13 16:42:31 PDT 2026
+Node: g015
+Python: /gpfs/projects/imt526a/group2/envLLM/bin/python
+Python 3.12.13
+Model dir: /gpfs/projects/imt526a/group2/agent-reliability/models/qwen2.5-7b-instruct
+Result dir: /gpfs/projects/imt526a/group2/agent-reliability/results/qwen_vllm_calib_50_114602
+Checking GPU...
+Wed May 13 16:42:31 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.71.05              Driver Version: 595.71.05      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H200                    On  |   00000000:4C:00.0 Off |                    0 |
+| N/A   41C    P0             81W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking model files...
+total 15G
+-rw-r--r-- 1 ytmao imt526a  12K May  8 14:54 LICENSE
+-rw-r--r-- 1 ytmao imt526a 6.1K May  8 14:54 README.md
+-rw-r--r-- 1 ytmao imt526a  663 May  8 14:54 config.json
+-rw-r--r-- 1 ytmao imt526a  243 May  8 14:54 generation_config.json
+-rw-r--r-- 1 ytmao imt526a 1.6M May  8 14:54 merges.txt
+-rw-r--r-- 1 ytmao imt526a 3.7G May  8 14:54 model-00001-of-00004.safetensors
+-rw-r--r-- 1 ytmao imt526a 3.6G May  8 14:54 model-00002-of-00004.safetensors
+-rw-r--r-- 1 ytmao imt526a 3.6G May  8 14:54 model-00003-of-00004.safetensors
+-rw-r--r-- 1 ytmao imt526a 3.4G May  8 14:54 model-00004-of-00004.safetensors
+Starting vLLM Qwen server...
+vLLM PID: 332259
+vLLM log: /gpfs/projects/imt526a/group2/agent-reliability/logs/vllm-qwen-114602.log
+Waiting for vLLM...
+vLLM process exited early.
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1082, in run_engine_core
+(EngineCore pid=333188)     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=333188)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=333188)     return func(*args, **kwargs)
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 848, in __init__
+(EngineCore pid=333188)     super().__init__(
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 124, in __init__
+(EngineCore pid=333188)     kv_cache_config = self._initialize_kv_caches(vllm_config)
+(EngineCore pid=333188)                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=333188)     return func(*args, **kwargs)
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 247, in _initialize_kv_caches
+(EngineCore pid=333188)     available_gpu_memory = self.model_executor.determine_available_memory()
+(EngineCore pid=333188)                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/executor/abstract.py", line 136, in determine_available_memory
+(EngineCore pid=333188)     return self.collective_rpc("determine_available_memory")
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 80, in collective_rpc
+(EngineCore pid=333188)     result = run_method(self.driver_worker, method, args, kwargs)
+(EngineCore pid=333188)              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/serial_utils.py", line 510, in run_method
+(EngineCore pid=333188)     return func(*args, **kwargs)
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+(EngineCore pid=333188)     return func(*args, **kwargs)
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/worker/gpu_worker.py", line 370, in determine_available_memory
+(EngineCore pid=333188)     self.model_runner.profile_run()
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py", line 5789, in profile_run
+(EngineCore pid=333188)     output = self._dummy_sampler_run(last_hidden_states)
+(EngineCore pid=333188)              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+(EngineCore pid=333188)     return func(*args, **kwargs)
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py", line 5596, in _dummy_sampler_run
+(EngineCore pid=333188)     sampler_output = self.sampler(
+(EngineCore pid=333188)                      ^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+(EngineCore pid=333188)     return self._call_impl(*args, **kwargs)
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+(EngineCore pid=333188)     return forward_call(*args, **kwargs)
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/sample/sampler.py", line 96, in forward
+(EngineCore pid=333188)     sampled, processed_logprobs = self.sample(logits, sampling_metadata)
+(EngineCore pid=333188)                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/sample/sampler.py", line 187, in sample
+(EngineCore pid=333188)     random_sampled, processed_logprobs = self.topk_topp_sampler(
+(EngineCore pid=333188)                                          ^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+(EngineCore pid=333188)     return self._call_impl(*args, **kwargs)
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+(EngineCore pid=333188)     return forward_call(*args, **kwargs)
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/sample/ops/topk_topp_sampler.py", line 106, in forward_native
+(EngineCore pid=333188)     logits = apply_top_k_top_p(logits, k, p)
+(EngineCore pid=333188)              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/sample/ops/topk_topp_sampler.py", line 252, in apply_top_k_top_p
+(EngineCore pid=333188)     return apply_top_k_top_p_triton(logits, k, p)
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/sample/ops/topk_topp_triton.py", line 1035, in apply_top_k_top_p_triton
+(EngineCore pid=333188)     _topk_topp_kernel[(NUM_PROGRAMS,)](
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/triton/runtime/jit.py", line 370, in <lambda>
+(EngineCore pid=333188)     return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+(EngineCore pid=333188)                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/triton/runtime/jit.py", line 700, in run
+(EngineCore pid=333188)     device = driver.active.get_current_device()
+(EngineCore pid=333188)              ^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/triton/runtime/driver.py", line 28, in active
+(EngineCore pid=333188)     self._active = self.default
+(EngineCore pid=333188)                    ^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/triton/runtime/driver.py", line 22, in default
+(EngineCore pid=333188)     self._default = _create_driver()
+(EngineCore pid=333188)                     ^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/triton/runtime/driver.py", line 10, in _create_driver
+(EngineCore pid=333188)     return active_drivers[0]()
+(EngineCore pid=333188)            ^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/triton/backends/nvidia/driver.py", line 720, in __init__
+(EngineCore pid=333188)     self.utils = CudaUtils()  # TODO: make static
+(EngineCore pid=333188)                  ^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/triton/backends/nvidia/driver.py", line 62, in __init__
+(EngineCore pid=333188)     mod = compile_module_from_src(
+(EngineCore pid=333188)           ^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/triton/runtime/build.py", line 95, in compile_module_from_src
+(EngineCore pid=333188)     cache_path = cache.put(f.read(), f"{name}{suffix}", binary=True)
+(EngineCore pid=333188)                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/triton/runtime/cache.py", line 116, in put
+(EngineCore pid=333188)     with open(temp_path, mode) as f:
+(EngineCore pid=333188)          ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=333188) OSError: [Errno 122] Disk quota exceeded
+[rank0]:[W513 16:43:19.426657267 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+(APIServer pid=332259) Traceback (most recent call last):
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/bin/vllm", line 6, in <module>
+(APIServer pid=332259)     sys.exit(main())
+(APIServer pid=332259)              ^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 75, in main
+(APIServer pid=332259)     args.dispatch_function(args)
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 122, in cmd
+(APIServer pid=332259)     uvloop.run(run_server(args))
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=332259)     return __asyncio.run(
+(APIServer pid=332259)            ^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/asyncio/runners.py", line 195, in run
+(APIServer pid=332259)     return runner.run(main)
+(APIServer pid=332259)            ^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=332259)     return self._loop.run_until_complete(task)
+(APIServer pid=332259)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=332259)     return await main
+(APIServer pid=332259)            ^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 672, in run_server
+(APIServer pid=332259)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 686, in run_server_worker
+(APIServer pid=332259)     async with build_async_engine_client(
+(APIServer pid=332259)                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=332259)     return await anext(self.gen)
+(APIServer pid=332259)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 100, in build_async_engine_client
+(APIServer pid=332259)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=332259)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=332259)     return await anext(self.gen)
+(APIServer pid=332259)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 136, in build_async_engine_client_from_engine_args
+(APIServer pid=332259)     async_llm = AsyncLLM.from_vllm_config(
+(APIServer pid=332259)                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 225, in from_vllm_config
+(APIServer pid=332259)     return cls(
+(APIServer pid=332259)            ^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 154, in __init__
+(APIServer pid=332259)     self.engine_core = EngineCoreClient.make_async_mp_client(
+(APIServer pid=332259)                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=332259)     return func(*args, **kwargs)
+(APIServer pid=332259)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 130, in make_async_mp_client
+(APIServer pid=332259)     return AsyncMPClient(*client_args)
+(APIServer pid=332259)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=332259)     return func(*args, **kwargs)
+(APIServer pid=332259)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 887, in __init__
+(APIServer pid=332259)     super().__init__(
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 535, in __init__
+(APIServer pid=332259)     with launch_core_engines(
+(APIServer pid=332259)          ^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/contextlib.py", line 144, in __exit__
+(APIServer pid=332259)     next(self.gen)
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/utils.py", line 998, in launch_core_engines
+(APIServer pid=332259)     wait_for_engine_startup(
+(APIServer pid=332259)   File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/v1/engine/utils.py", line 1057, in wait_for_engine_startup
+(APIServer pid=332259)     raise RuntimeError(
+(APIServer pid=332259) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}

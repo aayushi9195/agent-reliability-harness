@@ -1,0 +1,34 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+==== JOB CONFIG ====
+Model: Llama-3.1-8B-Instruct
+Fault: clean
+Seed: 1
+Range: 0 -> 10
+Output: Llama-3.1-8B-Instruct/clean/seed_1_0_10_116727_
+/gpfs/home/tpeyton2/tau_runs
+Starting vLLM...
+Waiting for vLLM...
+/var/spool/slurmd/job116727/slurm_script: line 71: Llama-3.1-8B-Instruct/clean/seed_1_0_10_116727_/vllm.log: No such file or directory
+[2026-05-15T08:45:52.893] error: *** JOB 116727 ON g013 CANCELLED AT 2026-05-15T08:45:52 DUE to SIGNAL Terminated ***

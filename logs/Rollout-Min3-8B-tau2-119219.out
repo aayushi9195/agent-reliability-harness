@@ -1,0 +1,44 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+==== JOB CONFIG ====
+Model: Mixtral-8x7B-Instruct-v0
+Fault: clean
+Seed: 2
+Range: 0 -> 10
+Output: /gpfs/projects/imt526a/group2/agent-reliability/results/Mixtral-8x7B-Instruct-v0/clean/seed_2
+/gpfs/home/tpeyton2/tau_runs
+Starting vLLM...
+Waiting for vLLM...
+vLLM failed to start
+Traceback (most recent call last):
+  File "/gpfs/projects/imt526a/group2/envLLM/bin/vllm", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 72, in main
+    cmds[args.subparser].validate(args)
+  File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 125, in validate
+    validate_parsed_serve_args(args)
+  File "/gpfs/projects/imt526a/group2/envLLM/lib/python3.12/site-packages/vllm/entrypoints/openai/cli_args.py", line 364, in validate_parsed_serve_args
+    raise TypeError("Error: --enable-auto-tool-choice requires --tool-call-parser")
+TypeError: Error: --enable-auto-tool-choice requires --tool-call-parser

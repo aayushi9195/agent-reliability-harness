@@ -1,0 +1,951 @@
+________________________________________________________________________________
+Miniforge (conda) has been loaded.
+
+WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute
+nodes.
+
+- Please create and work in your own conda environments:
+    conda create -n myenv python=3.11
+    conda activate myenv
+
+- To customize environment or package locations, edit your ~/.condarc:
+    envs_dirs:
+      - /path/to/your/envs
+    pkgs_dirs:
+      - /path/to/your/pkgs
+
+  For more information, see:
+    https://docs.conda.io/projects/conda/en/latest/configuration.html
+
+- If your personal Conda stops working after unloading this module, try:
+    source ~/.bashrc
+________________________________________________________________________________
+
+Started: Tue May 19 13:47:13 PDT 2026
+Tue May 19 13:47:13 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.71.05              Driver Version: 595.71.05      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H200                    On  |   00000000:9B:00.0 Off |                    0 |
+| N/A   30C    P0             78W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+vLLM ready: Tue May 19 13:48:03 PDT 2026
+2026-05-19 13:48:03.659 | WARNING  | tau2.utils.utils:<module>:15 - No .env file found
+2026-05-19 13:48:03.659 | INFO     | tau2.utils.utils:<module>:28 - Using data directory from source: /gpfs/projects/imt526a/group2/agent-reliability/repos/tau-bench/data
+2026-05-19 13:48:05.474 | INFO     | tau2.utils.llm_utils:<module>:102 - LiteLLM: Cache is disabled
+2026-05-19 13:48:05.561 | DEBUG    | tau2.registry:<module>:281 - Registering default components...
+2026-05-19 13:48:05.568 | DEBUG    | tau2.registry:<module>:292 - Voice dependencies not installed, skipping voice user registration
+2026-05-19 13:48:05.568 | DEBUG    | tau2.registry:<module>:350 - Default components registered successfully. Registry info: {
+  "domains": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ],
+  "agents": [
+    "llm_agent",
+    "llm_agent_gt",
+    "llm_agent_solo",
+    "discrete_time_audio_native_agent"
+  ],
+  "users": [
+    "user_simulator",
+    "dummy_user"
+  ],
+  "task_sets": [
+    "mock",
+    "airline",
+    "retail",
+    "telecom_full",
+    "telecom_small",
+    "telecom",
+    "telecom-workflow",
+    "banking_knowledge"
+  ]
+}
+╭────────────────────────── Simulation Configuration ──────────────────────────╮
+│ Domain: retail  Task Set: Default  Tasks: All                                │
+│ Trials: 1  Max Steps: 300  Max Errors: 10                                    │
+│                                                                              │
+│ Agent: llm_agent → hosted_vllm/meta-llama/Llama-3.1-8B-Instruct              │
+│ User:  user_simulator → gpt-4o-mini                                          │
+│                                                                              │
+│ Save: Not specified  Concurrency: 3  Verbose: False                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+0/10 (trial 1/1). Running task 0, trial 1
+1/10 (trial 1/1). Running task 1, trial 1
+2/10 (trial 1/1). Running task 2, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:06.185 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:06.188 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:06.191 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 1/3 for task 1: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 1/3 for task 2: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 1/3 for task 0: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:07.399 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:07.415 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:07.419 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 2/3 for task 1: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 2/3 for task 0: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 2/3 for task 2: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:08.601 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+  Retry 3/3 for task 1: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+2026-05-19 13:48:08.621 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:08.621 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 3/3 for task 0: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 3/3 for task 2: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:09.819 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:09.822 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:09.825 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:09.841 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 2 failed after 4 attempts: litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Task 2 failed permanently after 4 attempts: litellm.NotFoundError: 
+NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+2026-05-19 13:48:09.841 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 1 failed after 4 attempts: litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Task 1 failed permanently after 4 attempts: litellm.NotFoundError: 
+NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+2026-05-19 13:48:09.842 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 0 failed after 4 attempts: litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Task 0 failed permanently after 4 attempts: litellm.NotFoundError: 
+NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+3/10 (trial 1/1). Running task 3, trial 1
+4/10 (trial 1/1). Running task 4, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+5/10 (trial 1/1). Running task 5, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:10.029 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:10.032 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+  Retry 1/3 for task 3: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 1/3 for task 4: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+2026-05-19 13:48:10.050 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 1/3 for task 5: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:11.222 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:11.245 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:11.254 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 2/3 for task 3: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 2/3 for task 5: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 2/3 for task 4: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:12.452 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:12.467 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:12.472 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 3/3 for task 3: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 3/3 for task 5: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 3/3 for task 4: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:13.649 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:13.667 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 3 failed after 4 attempts: litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Task 3 failed permanently after 4 attempts: litellm.NotFoundError: 
+NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+2026-05-19 13:48:13.669 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:13.670 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+6/10 (trial 1/1). Running task 6, trial 1
+2026-05-19 13:48:13.685 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 5 failed after 4 attempts: litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Task 5 failed permanently after 4 attempts: litellm.NotFoundError: 
+NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+2026-05-19 13:48:13.686 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 4 failed after 4 attempts: litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Task 4 failed permanently after 4 attempts: litellm.NotFoundError: 
+NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+7/10 (trial 1/1). Running task 7, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+8/10 (trial 1/1). Running task 8, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:14.470 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:14.486 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 1/3 for task 6: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+2026-05-19 13:48:14.491 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 1/3 for task 7: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 1/3 for task 8: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:15.661 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+  Retry 2/3 for task 6: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+2026-05-19 13:48:15.680 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:15.683 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 2/3 for task 8: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 2/3 for task 7: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:16.856 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:16.870 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:16.875 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 3/3 for task 6: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 3/3 for task 7: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+  Retry 3/3 for task 8: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:18.069 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:18.069 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:18.074 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:18.090 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 6 failed after 4 attempts: litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Task 6 failed permanently after 4 attempts: litellm.NotFoundError: 
+NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+2026-05-19 13:48:18.090 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 8 failed after 4 attempts: litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:18.091 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 7 failed after 4 attempts: litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Task 8 failed permanently after 4 attempts: litellm.NotFoundError: 
+NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+  Task 7 failed permanently after 4 attempts: litellm.NotFoundError: 
+NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+9/10 (trial 1/1). Running task 9, trial 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:18.171 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 1/3 for task 9: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:19.241 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 2/3 for task 9: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:20.321 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Retry 3/3 for task 9: litellm.NotFoundError: NotFoundError: OpenAIException - 
+The model `gpt-4o-mini` does not exist.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+2026-05-19 13:48:21.387 | ERROR    | tau2.utils.llm_utils:generate:417 - litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+2026-05-19 13:48:21.394 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 9 failed after 4 attempts: litellm.NotFoundError: NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+  Task 9 failed permanently after 4 attempts: litellm.NotFoundError: 
+NotFoundError: OpenAIException - The model `gpt-4o-mini` does not exist.
+
+Successfully completed all simulations!
+To review the simulations, run: tau2 view
+╭───────────────────────── Agent Performance Metrics ──────────────────────────╮
+│   ═══ Overview ═══                                                           │
+│   Total Simulations         10                                               │
+│   ⚠️  Infra Errors          10 (excluded from metrics below)                 │
+│   Evaluated                 0                                                │
+│   Total Tasks               0                                                │
+│                                                                              │
+│   ═══ Reward Metrics ═══                                                     │
+│   🏆 Average Reward         0.0000                                           │
+│   💰 Avg Cost/Conversation  $0.0000                                          │
+│                                                                              │
+│   ═══ Action Metrics ═══                                                     │
+│   📖 Read Actions           -                                                │
+│   ✏️  Write Actions         -                                                │
+│                                                                              │
+│   ═══ DB Match ═══                                                           │
+│   🗄️  DB Match              Not checked: 0                                   │
+│                                                                              │
+│   ═══ Authentication ═══                                                     │
+│                                                                              │
+│   ═══ Termination ═══                                                        │
+│   🛑 Normal Stop            0 (👤 0 / 🤖 0)                                  │
+│                                                                              │
+│   ═══ LLM Judge Review ═══                                                   │
+│                             No review data available                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Elapsed seconds: 19
+Average seconds per episode: 1.9
+Finished: Tue May 19 13:48:22 PDT 2026
