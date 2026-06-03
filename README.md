@@ -29,20 +29,20 @@ The repository includes SLURM rollout scripts, benchmark results, raw logs, metr
 
 The project is organized around running, analyzing, and reporting reliability experiments for tool-using LLM agents.
 
-tau2-bench/ contains the local tau2 benchmark codebase used to run retail and airline agent tasks. This includes local utility changes for message handling and fault injection.
+  tau2-bench/ contains the local tau2 benchmark codebase used to run retail and airline agent tasks. This includes local utility changes for message handling and fault injection.
 
-sbatch/ contains SLURM and shell scripts for launching benchmark rollouts, vLLM-backed model runs, calibration jobs, and predictor training jobs on the cluster.
+  sbatch/ contains SLURM and shell scripts for launching benchmark rollouts, vLLM-backed model runs, calibration jobs, and predictor training jobs on the cluster.
 
-logs/ stores raw rollout logs and vLLM server logs from benchmark runs.
+  logs/ stores raw rollout logs and vLLM server logs from benchmark runs.
 
-results/ stores benchmark output artifacts produced by model runs, organized by model, fault mode, seed, or experiment configuration.
+  results/ stores benchmark output artifacts produced by model runs, organized by model, fault mode, seed, or experiment configuration.
 
-metrics/ contains analysis scripts for computing harness metrics, preparing early-run predictor data, training binary failure predictors, and summarizing model/runtime errors.
+  metrics/ contains analysis scripts for computing harness metrics, preparing early-run predictor data, training binary failure predictors, and summarizing model/runtime errors.
 
-model_failure_appendix/ contains generated failure summaries, configuration inventories, and appendix-ready model failure reports.
+  model_failure_appendix/ contains generated failure summaries, configuration inventories, and appendix-ready model failure reports.
 
-Model README.md documents model-level performance findings, recurring failure modes, and interpretation of benchmark reliability results.
+  Model README.md documents model-level performance findings, recurring failure modes, and interpretation of benchmark reliability results.
 
-utils_fault_injection_changes.md documents the local tau2 utility changes, especially the added fault-injection module and LiteLLM message-normalization changes.
+  utils_fault_injection_changes.md documents the local tau2 utility changes, especially the added fault-injection module and LiteLLM message-normalization changes.
 
-clean_calibration_models.md summarizes calibration-related model screening and clean-run evaluation notes.
+  clean_calibration_models.md summarizes calibration-related model screening and clean-run evaluation notes.
