@@ -198,14 +198,14 @@ The calibration stage was therefore used to narrow the candidate set before the 
 
 ## Summary of calibration-stage screening
 
-| Model | What was tested | Outcome | Decision |
-| --- | --- | --- | --- |
-| `Qwen3-14B` | thinking ON vs OFF | ON performed about 2x better than OFF | keep thinking ON |
-| `Qwen/Qwen2.5-7B-Instruct` | clean calibration | useful smaller baseline, but weaker than Qwen3-14B | comparison only |
-| `Qwen3-8B` | clean calibration via `Rollout-Qwen3-8B-tau2-116756.out` and `Rollout-Qwen3-8B-tau2-116769.out` | intermediate Qwen baseline; not stronger than Qwen3-14B thinking ON | comparison only |
-| `NousResearch/Hermes-2-Pro-Llama-3-8B` | clean calibration | weak agent-task performance | drop |
-| `mistralai/Mistral-Small-3.2-24B-Instruct-2506` | clean calibration | `Pass^1 = 0.00`, high token cost, context issues | drop |
-| `deepseek-ai/DeepSeek-R1-Distill-Qwen-7B` | clean screening | poor fit with local serving setup | do not continue |
-| `deepseek-ai/DeepSeek-R1-Distill-Qwen-14B` | clean screening | poor fit with local serving setup | do not continue |
-| `gemma-2-9b-it` | clean calibration via `Rollout-Gemma-tau2-116938.out` | clearest Gemma sample; system-role compatibility failure | not preferred without message-format adjustment |
-| `Llama-3.1-8B-Instruct` | early fallback screening | unstable due to configuration/runtime issues | not preferred |
+| Model | What was tested | Sample log | Outcome | Decision |
+| --- | --- | --- | --- | --- |
+| `Qwen3-14B` | thinking ON vs OFF | [`qwen3-14b-10-119228.out`](logs/qwen3-14b-10-119228.out) | ON performed about 2x better than OFF | keep thinking ON |
+| `Qwen/Qwen2.5-7B-Instruct` | clean calibration | [`qwen-calib-50-114547.out`](logs/qwen-calib-50-114547.out) | useful smaller baseline, but weaker than Qwen3-14B | comparison only |
+| `Qwen3-8B` | clean calibration | [`Rollout-Qwen3-8B-tau2-116769.out`](logs/Rollout-Qwen3-8B-tau2-116769.out) | intermediate Qwen baseline; not selected after weak/medium/strong model-tier selection | comparison only |
+| `NousResearch/Hermes-2-Pro-Llama-3-8B` | clean calibration | [`hermes10-119142.out`](logs/hermes10-119142.out) | weak agent-task performance | drop |
+| `mistralai/Mistral-Small-3.2-24B-Instruct-2506` | clean calibration | [`mistral32-10-119320.out`](logs/mistral32-10-119320.out) | `Pass^1 = 0.00`, high token cost, context issues | drop |
+| `deepseek-ai/DeepSeek-R1-Distill-Qwen-7B` | clean screening | [`deepseek7b-20-120301.out`](logs/deepseek7b-20-120301.out) | poor fit with local serving setup | do not continue |
+| `deepseek-ai/DeepSeek-R1-Distill-Qwen-14B` | clean screening | [`deepseek7b-20-120318.out`](logs/deepseek7b-20-120318.out) | poor fit with local serving setup | do not continue |
+| `gemma-2-9b-it` | clean calibration | [`Rollout-Gemma-tau2-116938.out`](logs/Rollout-Gemma-tau2-116938.out) | clearest Gemma sample; system-role compatibility failure | not preferred without message-format adjustment |
+| `Llama-3.1-8B-Instruct` | early fallback screening | [`llama31-8b-10-119321.out`](logs/llama31-8b-10-119321.out) | unstable due to configuration/runtime issues | not preferred |
