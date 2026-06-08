@@ -1,0 +1,120 @@
+{
+  "Qwen2.5-7B-Instruct": {
+    "conditions": {
+      "clean": {
+        "n_episodes": 860,
+        "n_success": 128,
+        "pass_at_1": 0.1488,
+        "pass_at_5": 0.4258,
+        "tasks_with_pass_at_5": 114,
+        "tasks_total": 114
+      },
+      "heavy": {
+        "n_episodes": 255,
+        "n_success": 114,
+        "pass_at_1": 0.4471,
+        "pass_at_5": 0.4694,
+        "tasks_with_pass_at_5": 49,
+        "tasks_total": 50
+      }
+    },
+    "fault_tolerance_score": 0.36187142857142857
+  },
+  "Qwen3-14B": {
+    "conditions": {
+      "clean": {
+        "n_episodes": 592,
+        "n_success": 187,
+        "pass_at_1": 0.3159,
+        "pass_at_5": 0.5043,
+        "tasks_with_pass_at_5": 109,
+        "tasks_total": 114
+      },
+      "heavy": {
+        "n_episodes": 564,
+        "n_success": 97,
+        "pass_at_1": 0.172,
+        "pass_at_5": 0.4575,
+        "tasks_with_pass_at_5": 98,
+        "tasks_total": 114
+      }
+    },
+    "fault_tolerance_score": 0.2131142857142857
+  },
+  "gemma-4-31B-it": {
+    "conditions": {
+      "unknown": {
+        "n_episodes": 75,
+        "n_success": 13,
+        "pass_at_1": 0.1733,
+        "pass_at_5": 0.1111,
+        "tasks_with_pass_at_5": 9,
+        "tasks_total": 20
+      },
+      "clean": {
+        "n_episodes": 286,
+        "n_success": 119,
+        "pass_at_1": 0.4161,
+        "pass_at_5": 0.48,
+        "tasks_with_pass_at_5": 50,
+        "tasks_total": 59
+      },
+      "heavy": {
+        "n_episodes": 121,
+        "n_success": 53,
+        "pass_at_1": 0.438,
+        "pass_at_5": null,
+        "tasks_with_pass_at_5": 0,
+        "tasks_total": 50
+      },
+      "light": {
+        "n_episodes": 250,
+        "n_success": 115,
+        "pass_at_1": 0.46,
+        "pass_at_5": 0.46,
+        "tasks_with_pass_at_5": 50,
+        "tasks_total": 50
+      }
+    },
+    "fault_tolerance_score": 0.44022000000000006
+  },
+  "Qwen2.5b": {
+    "conditions": {
+      "clean": {
+        "n_episodes": 11,
+        "n_success": 1,
+        "pass_at_1": 0.0909,
+        "pass_at_5": null,
+        "tasks_with_pass_at_5": 0,
+        "tasks_total": 11
+      }
+    },
+    "fault_tolerance_score": 0.09089999999999998
+  },
+  "Qwen3-8B": {
+    "conditions": {
+      "clean": {
+        "n_episodes": 10,
+        "n_success": 3,
+        "pass_at_1": 0.3,
+        "pass_at_5": null,
+        "tasks_with_pass_at_5": 0,
+        "tasks_total": 10
+      }
+    },
+    "fault_tolerance_score": 0.3
+  },
+  "Llama-3.1-8B-Instruct": {
+    "conditions": {
+      "clean": {
+        "n_episodes": 50,
+        "n_success": 4,
+        "pass_at_1": 0.08,
+        "pass_at_5": null,
+        "tasks_with_pass_at_5": 0,
+        "tasks_total": 50
+      }
+    },
+    "fault_tolerance_score": 0.08
+  }
+}
